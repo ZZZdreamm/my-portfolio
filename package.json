@@ -2,7 +2,7 @@
   "name": "my-cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zzzdreamm.github.io/portfolio",
+  "homepage": "https://zzzdreamm.github.io/my-portfolio",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@testing-library/jest-dom": "^5.16.5",
