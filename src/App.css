@@ -1,38 +1,229 @@
-.App {
+
+.notOpened-menu{
+  position: fixed;
+  height: 100vh;
+  width: 4vw;
+  background-color: rgb(96, 94, 94);
+}
+.menu{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: aquamarine;
+  width: 18vw;
+  z-index: 3;
+  transition: margin 1s;
+  margin: 0 0 0 -18vw;
+}
+.menu.menuOpen{
+  margin: 0;
+}
+.menu-option{
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-right: 25%;
+}
+.homepage{
+  position: relative;
+  left: 4vw;
+  width: 96vw;
+  background-color: rgb(158, 203, 240);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 48vw 48vw;
+  grid-template-rows: 50vh 50vh;
+}
+#menu-close{
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.short-info-about-me{
+  font-size: 18px;
+  margin-left: 8%;
+}
+.my-name{
+  margin-right: 65%;
+  font-size: 25px;
+}
+.my-intro{
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ball {
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  margin: 30px auto 0;
+  background-color: rgb(27, 23, 23);
+  border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
+  background-image: -webkit-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+  background-image: -o-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+  background-image: -ms-linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+
+  -webkit-animation: spin 8s linear infinite, moveLeftToRight 8s linear infinite;
+  -moz-animation: spin 8s linear infinite, moveLeftToRight 8s linear infinite;
+  -ms-animation: spin 8s linear infinite, moveLeftToRight 8s linear infinite;
+  animation: spin 8s linear infinite, moveLeftToRight 8s linear infinite;
+
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+
+  position: absolute;
+}
+.ball .eight {
+  width: 3vw;
+  height: 3vw;
+  margin: 31%;
+  background: white;
+  border-radius: 50%;
+  -webkit-transform: translateX(68px) translateY(-60px) skewX(6deg) skewY(2deg);
+  -moz-transform: translateX(68px) translateY(-60px) skewX(6deg) skewY(2deg);
+  -ms-transform: translateX(68px) translateY(-60px) skewX(6deg) skewY(2deg);
+  -o-transform: translateX(68px) translateY(-60px) skewX(6deg) skewY(2deg);
+  transform: translateX(68px) translateY(-60px) skewX(6deg) skewY(2deg);
+  position: absolute;
+  right: 3vw;
+  top: 3vw;
+}
+.ball .eight:before {
+  content: "8";
+  display: block;
+  position: absolute;
   text-align: center;
+  height: 80px;
+  width: 100px;
+  left: 10px;
+  margin-left: -40px;
+  top: 50px;
+  margin-top: -40px;
+  color: black;
+  font-family: Arial;
+  transform: skewX(-4deg);
+  font-size: 45px;
+  line-height: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@-ms-keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(180deg); }
+  50% { transform: rotate(360deg); }
+  75% { transform: rotate(180deg); }
+  100% { transform: rotate(0deg); }
+}
+@-moz-keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(180deg); }
+  50% { transform: rotate(360deg); }
+  75% { transform: rotate(180deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(180deg); }
+  50% { transform: rotate(360deg); }
+  75% { transform: rotate(180deg); }
+  100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(180deg); }
+  50% { transform: rotate(360deg); }
+  75% { transform: rotate(180deg); }
+  100% { transform: rotate(0deg); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+@-moz-keyframes moveLeftToRight {
+  0%   { left: 50vw; }
+  25% { left: 80%; top: 0vh;}
+  50%  { top: 20vh; left: 80%;}
+  75% {left: 50vw; top: 20vh;}
+  100% { left: 50vw; top: 0vh;}
+}
+@-ms-keyframes moveLeftToRight {
+  0%   { left: 50vw; }
+  25% { left: 75%; top: 0vh;}
+  50%  { top: 20vh; left: 75%;}
+  75% {left: 50vw; top: 20vh;}
+  100% { left: 50vw; top: 0vh;}
+}
+@keyframes moveLeftToRight {
+  0%   { left: 50vw; }
+  25% { left: 85%; top: 0vh;}
+  50%  { top: 32vh; left: 85%;}
+  75% {left: 50vw; top: 32vh;}
+  100% { left: 50vw; top: 0vh;}
+}
+@-webkit-keyframes moveLeftToRight {
+  0%   { left: 50vw; }
+  25% { left: 80%; top: 0vh;}
+  50%  { top: 40vh; left: 80%;}
+  75% {left: 50vw; top: 40vh;}
+  100% { left: 50vw; top: 0vh;}
+}
+.intro-photo{
+  height: 100%;
+  width: 100%;
+}
+.intro-photo-container{
+ border: 15px solid rgb(158, 203, 240);
+}
+.about-me{
+  position: relative;
+  left: 4vw;
+  width: 96vw;
+  height: 70vh;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+}
+.about-me-text{
+  position: relative;
+  left: 7%;
+  width: 43%;
+  height: 100%;
+}
+.about-me-img{
+  padding: 2% 10%;
+  width: 30%;
+  height: 90%;
+}
+.submit-button{
+  height: 50px;
+  width: 100px;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  border-radius: 30px;
+}
+img { transition: filter 1s linear; }
+.blur { filter: blur(30px); }
+
+.color-change {animation: change-color 1s linear infinite;}
+
+@keyframes change-color{
+  0% {background-color: white;}
+  100%{background-color: black;}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.my-projects{
+  position: relative;
+  left: 4vw;
+  width: 96vw;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
