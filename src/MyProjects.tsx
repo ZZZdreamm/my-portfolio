@@ -77,7 +77,7 @@ export default function MyProjects() {
         <span id="refMyProjects"></span>
       <div id="projects-section" className="my-projects change-color">
         <h1 style={{marginTop:'100px'}}>Links to my projects and Linkedin</h1>
-        <h3>Most of projects are only on Github</h3>
+        <h3>Most of my projects are only on Github</h3>
         <h4>My Linkedin</h4>
         <a href="https://www.linkedin.com/in/kacper-multan-320301243" style={{cursor:'pointer', color:'white'}}>https://www.linkedin.com/in/kacper-multan-320301243</a>
         <h4>My Github</h4>

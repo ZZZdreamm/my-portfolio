@@ -11,14 +11,13 @@ import LandingPage from './LandingPage';
 function App() {
   return (
     <div className="App">
-        <LandingPage/>
-      {/* <HashRouter>
+      <HashRouter>
         <Routes>
           {routes.map((route)=>(
             <Route element={route.component()} path={route.path}/>
           ))}
         </Routes>
-      </HashRouter> */}
+      </HashRouter>
 
     </div>
   );
