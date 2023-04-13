@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import { ReadyImagesURL } from "./publicPaths"
 
 export default function Home(){
     return(
@@ -19,10 +20,10 @@ export default function Home(){
         </div>
       </div>
       <div className="intro-photo-container">
-        <img className="intro-photo" src="/sky.jpg"/>
+        <img className="intro-photo" src={`${ReadyImagesURL}/sky.jpg`}/>
       </div>
       <div className="intro-photo-container">
-        <img className="intro-photo" src="/weirdBusinessman.webp"/>
+        <img className="intro-photo" src={`${ReadyImagesURL}/weirdBusinessman.webp`}/>
       </div>
     </div>
     </>

@@ -1,83 +1,73 @@
 import emailjs from "@emailjs/browser";
 import { useEffect, useRef } from "react";
-import { Form } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 import { ObserverIsVisible } from "./ObserverIsVisible";
+import { ReadyImagesURL } from "./publicPaths";
 import useEffectAfterSecondRender from "./useEffectAfterSecondRender";
+import GoBack from "./GoBack";
 export default function AboutMe() {
-
   const form = useRef<HTMLFormElement | null>(null);
-  const sendEmail = (e:any) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
-
     //@ts-ignore
-    emailjs.sendForm('service_7rv6lus', 'template_qbxmgfj', form.current, 'HyBgoYbq4MyHVTa3_')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_7rv6lus",
+        "template_qbxmgfj",
+    //@ts-ignore
+        form.current,
+        "HyBgoYbq4MyHVTa3_"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error:any) => {
+        },
+        (error: any) => {
           console.log(error.text);
-      });
+        }
+      );
   };
-
-
-  useEffectAfterSecondRender(()=>{
-    const blurImg = document.getElementById('about-me-img')
-    if(blurImg){
-      window!.addEventListener("load", ()=>{
-        const options = {
-          rootMargin: '0px',
-          threshold: 1.0
-        };
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if(entry.intersectionRatio > 0){
-              blurImg!.classList.remove('blur');
-                console.log('sdsds')
-            }else{
-              blurImg!.classList.add('blur');
-            }
-          });
-        }, options);
-      observer.observe(blurImg);
-      },false);
-    }
-  },[])
-
 
   return (
     <>
-    <span id="refAboutMe"></span>
-    <div id="about" className="about-me">
-      <div className="about-me-text">
-        <h1>About me</h1>
-        <span>
-          I'm Kacper. My adventure with programming started like a year ago. I
-          started trying many languages to see which one is most suitable for
-          me. I did some my own projects to upgrade my skills. Then started
-          doing projects for studies on Warsaw University of Technology. Now I'm
-          on second semester of first year of studies and I'm looking for job to
-          increase my skills and get some experience with real, useful projects.
-          If you are looking for Java Script, C# or Python junior developer
-          email me below.
-        </span>
-        <h1>Send me email</h1>
-        <form ref={form} onSubmit={sendEmail}>
-          <h3>Your name</h3>
-          <input type="text" name="user_name"/>
-          <h3>Your email</h3>
-          <input type="email" name="user_email" style={{ width: "40%" }} />
-          <h3>Your message</h3>
-          <textarea name="message" style={{ width: "90%", resize:'vertical'}} />
-          <button
-            className="submit-button"
-            type="submit"
-            style={{ marginTop: "20px" }}
-          >
-            Send message
-          </button>
-        </form>
+      <div id="about" className="about-me">
+        <div className="about-me-text">
+          <div className="about-front">
+            <h2 className="about-front-text">
+              I want to create and build digital products
+            </h2>
+          </div>
+          <h1 id="about-header">About me</h1>
+          <div className="about-story">
+            <span className="about-story-text">
+              I'm Kacper. My adventure with programming started like a year ago.
+              I started trying many languages to see which one is most suitable
+              for me.
+            </span>
+            <span className="about-story-text">
+              I did some my own projects to upgrade my skills. Then started
+              doing projects for studies on Warsaw University of Technology. Now
+              I'm on second semester of first year of studies and I'm looking
+              for job to increase my skills and get some experience with real,
+              useful projects.
+            </span>
+            <span
+              className="about-story-text"
+              style={{ marginBottom: "100px" }}
+            >
+              If you are looking for Java Script, C# or Python junior developer
+              email me below.
+            </span>
+            <a
+              id="resume-link"
+              href="https://drive.google.com/file/d/1ClqL9LLHHDR_BAOHjiq9znvClKh6Xw4b/view?usp=sharing"
+            >
+              My Resume (pdf)
+            </a>
+          </div>
+        </div>
+        <GoBack />
       </div>
-      <img id='about-me-img' className="about-me-img" src="/verticalPhoto.jpg" />
-    </div>
     </>
   );
 }
