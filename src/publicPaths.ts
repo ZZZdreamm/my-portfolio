@@ -1,1 +1,0 @@
-export const ReadyImagesURL = `${process.env.PUBLIC_URL}`
