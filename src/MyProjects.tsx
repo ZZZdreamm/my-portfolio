@@ -111,13 +111,15 @@ export default function MyProjects() {
       side: "left",
       link: "https://zzzdreamm.github.io/Facebug/",
     },
-    { icon: "chess.webp", name: "Chess app", side: "right", link: "" },
+    { icon: "chess.webp", name: "Chess app", side: "right", link: "https://zzzdreamm.github.io/Chesshub/" },
   ];
   return (
     <>
       <span id="refMyProjects"></span>
       <div className="my-projects change-color">
-        <h1 style={{ marginTop: "100px" }}>Some of my projects are right below</h1>
+        <h1 style={{ marginTop: "100px" }}>
+          Some of my projects are right below
+        </h1>
         <h3>But anyway most of my projects are only on Github</h3>
 
         {myProjects.map((project) => (
