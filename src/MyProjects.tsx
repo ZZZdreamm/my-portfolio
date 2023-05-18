@@ -111,7 +111,12 @@ export default function MyProjects() {
       side: "left",
       link: "https://zzzdreamm.github.io/Facebug/",
     },
-    { icon: "chess.webp", name: "Chess app", side: "right", link: "https://zzzdreamm.github.io/Chesshub/" },
+    {
+      icon: "chess.webp",
+      name: "Chess app",
+      side: "right",
+      link: "https://zzzdreamm.github.io/Chesshub/",
+    },
   ];
   return (
     <>
