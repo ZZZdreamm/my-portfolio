@@ -51,16 +51,16 @@ export default function AboutMe() {
               for job to increase my skills and get some experience with real,
               useful projects.
             </span>
-            <span
+            {/* <span
               className="about-story-text"
               style={{ marginBottom: "100px" }}
             >
-              If you are looking for Java Script, C# or Python junior developer
+              If you are looking for Javascript, C# or Python junior developer
               email me below.
-            </span>
+            </span> */}
             <a
               id="resume-link"
-              href="https://drive.google.com/file/d/1ClqL9LLHHDR_BAOHjiq9znvClKh6Xw4b/view?usp=sharing"
+              href="https://drive.google.com/file/d/1gcQ-NmrmqNT01nSIOfE8LAW7bV9S5svi/view?usp=sharing"
             >
               My Resume (pdf)
             </a>
