@@ -1,0 +1,16 @@
+
+.mySkill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 3em;
+    gap: 0.1em;
+  }
+
+  .mySkill-icon {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  .mySkill-name {
+    font-size: 1em;
+  }

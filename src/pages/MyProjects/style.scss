@@ -1,0 +1,24 @@
+@media screen and (min-width: 600px) {
+  .my-projects {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .my-projects {
+    width: 92vw;
+  }
+}
+
+.my-projects {
+  padding: 4vh 4vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+  font-size: 2rem;
+  border-image: linear-gradient(#f6483c, #0c8e9f) 30;
+  border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
+  border-image-width: 30px 48px;
+  position: relative;
+}

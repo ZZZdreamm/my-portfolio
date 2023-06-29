@@ -1,1 +1,1 @@
-export const ReadyImagesURL = `${process.env.PUBLIC_URL}`
+export const ReadyImagesURL = `${process.env.PUBLIC_URL}/images`

@@ -1,0 +1,60 @@
+.contact-socials {
+  margin-bottom: 10%;
+  width: 48vw;
+}
+
+.socials-container {
+  font-size: 4rem;
+  font-weight: bold;
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .contact-socials {
+    position: relative;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .socials-container {
+    position: relative;
+    left: 10vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-socials {
+    margin-top: 30%;
+    position: relative;
+    right: 50px;
+  }
+}
+
+@media only screen and (mix-width: 400px) {
+  .socials-container {
+    margin-top: 30%;
+    position: relative;
+    right: 0px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contact-socials {
+    margin-top: 10%;
+    position: relative;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .socials-container {
+    position: relative;
+    left: 10vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .socials-container {
+    height: 30rem;
+    top: 15%;
+  }
+}

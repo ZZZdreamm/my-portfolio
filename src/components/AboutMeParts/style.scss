@@ -1,0 +1,144 @@
+.about-story {
+  width: 97vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font: inherit;
+  gap: 3em;
+}
+
+@media screen and (max-width: 800px) {
+  .about-story {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-story-text {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .about-story-text {
+    width: 70%;
+  }
+}
+
+.about-story-text {
+  display: flex;
+  height: 100%;
+  text-align: left;
+  font-size: 1.2em;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#about-header {
+  font-size: 2.5em;
+}
+
+.about-story-skills {
+  width: calc(100% - 0.6em);
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em;
+  gap: 2em;
+  row-gap: 1em;
+  flex-wrap: wrap;
+}
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10%;
+  // height: 25rem;
+  width: 80%;
+  aspect-ratio: 1;
+}
+
+.skills-image {
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  z-index: 5;
+  background-color: grey;
+  transition: background-color 0.5s;
+  border: 1px solid black;
+  cursor: pointer;
+  &-1 {
+    left: 0;
+    bottom: 0;
+  }
+  &-2 {
+    left: 50%;
+    bottom: 0;
+  }
+  &-3 {
+    bottom: 50%;
+    left: 25%;
+  }
+  &-4 {
+    transform: rotate(180deg);
+    bottom: 0%;
+    left: 25%;
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mySkills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .mySkills-container {
+    height: 30rem;
+    position: relative;
+  }
+  .svg-container {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mySkills-container {
+    height: 50rem;
+  }
+  .svg-container {
+    position: absolute;
+    top: 0;
+  }
+  .displayedSkills {
+    position: absolute;
+    top: 70%;
+  }
+}
+
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: rgb(207, 207, 3);
+}
+.blue {
+  background-color: rgb(17, 91, 249);
+}
+.green {
+  background-color: rgb(131, 6, 240);
+}
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+}
+
+.fuschia {
+  background-color: #841c5f;
+}

@@ -1,0 +1,47 @@
+#resume-link {
+  margin-top: 1em;
+  font-size: 1.5em;
+  background-color: black;
+  border-radius: 1em;
+  width: fit-content;
+  padding: 0.3em;
+  cursor: pointer;
+  color: red;
+  text-decoration: none;
+  border: 1px solid #aaa;
+}
+#resume-link:hover {
+  background-color: #888;
+}
+
+#contact {
+  display: flex;
+  padding: 4vh 2vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {
+  #contact {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #contact {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  #contact {
+    margin-top: 100px;
+  }
+}

@@ -1,0 +1,40 @@
+.projects-icons {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .projects-icons {
+    width: 60vw;
+  }
+}
+@media screen and (min-width: 600px) {
+  .projects-icons {
+    width: 30vw;
+  }
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.project-left {
+  align-items: flex-start;
+  align-self: flex-start;
+}
+.project-right {
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  .project {
+    margin: 5vh 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  .project {
+    margin: 10vh 0;
+  }
+}

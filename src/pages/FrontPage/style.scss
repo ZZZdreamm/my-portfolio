@@ -1,0 +1,65 @@
+.front-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+#front-page-image {
+  width: 60vw;
+}
+.front-page-text {
+  position: relative;
+  left: 10vw;
+  width: 40vw;
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+.page-text {
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+}
+.page-text-changed {
+  transition: padding 0.5s;
+  padding: 0 5vw;
+}
+.page-text-back {
+  transition: padding 0.5s;
+  padding: 0 0vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-text {
+    font-size: 5em;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .page-text {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #front-page-image {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #front-page-image {
+    left: 20%;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .front-page-text {
+    font-size: 1.5em;
+  }
+}
