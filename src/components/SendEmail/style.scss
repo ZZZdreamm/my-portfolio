@@ -29,14 +29,13 @@
 }
 
 .submit-div {
-    align-self: center;
+  align-self: center;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1em;
   margin-top: 1em;
 }
-
 
 @media screen and (max-width: 1100px) {
   .send-email {
@@ -135,7 +134,6 @@
   }
 }
 
-
 $button-width: 150px;
 $spinner-width: $button-width/6;
 $blue: #0076d3;
@@ -157,18 +155,23 @@ $text-light: #fefefe;
   display: inline-block;
   min-width: $button-width;
   margin: 20px auto;
-  background: $btn-bg;
-  color: $text-light;
+  background-color: black;
+  color: white;
+  border: 1px solid #aaa;
+  &:hover {
+    color: red;
+    background-color: black;
+  }
+
   font-size: 1.2em;
   padding: 1em;
-  border-radius: 4px;
+  border-radius: 3rem;
   text-align: center;
   position: relative;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  border: 0;
-  transition: border-radius linear 0.05s, width linear 0.05s;
+  transition: border-radius linear 0.05s, width linear 0.05s, color 0.5s;
 
   &:focus {
     outline: 0;

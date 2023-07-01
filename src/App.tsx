@@ -1,4 +1,4 @@
-import "./Styles/GeneralStyles.scss";
+import "./GeneralStyles.scss";
 import LandingPage from "./pages/LandingPage";
 
 function App() {

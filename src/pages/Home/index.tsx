@@ -38,7 +38,6 @@ export default function FrontPage() {
       element?.classList.remove("page-text-changed");
     }
   }
-  const navigate = useNavigate();
 
   function scrollTo(elementId: string) {
     const element = document.getElementById(elementId);

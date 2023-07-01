@@ -25,8 +25,7 @@ export default function MyProjects() {
     <>
       <span id="projects"></span>
       <div className="my-projects change-color">
-        <div className="full-width very-large-font bold-font">My Work</div>
-        {/* <RotatingElement /> */}
+        <div className="full-width very-large-font bold-font text-center">My Work</div>
         {myProjects.map((project) => (
           <>
             {project.name === "" ? (
@@ -40,13 +39,6 @@ export default function MyProjects() {
                 link={project.link}
               />
             )}
-            {/* <Project
-              key={project.name}
-              icon={project.icon}
-              name={project.name}
-              side={project.side}
-              link={project.link}
-            /> */}
           </>
         ))}
         <div

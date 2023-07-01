@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.scss";
 import { ReadyImagesURL } from "../../publicPaths";
 export default function HamburgerBar() {
@@ -23,9 +23,19 @@ export default function HamburgerBar() {
       }
     }, 1000);
   }
+
+  useEffect(() => {
+    document.addEventListener("click", (e) => {
+      //@ts-ignore
+      if (e.target!.id != "hamburger-bar" && e.target!.id != "hamburger-icon") {
+        setOpen(false)
+      }
+    });
+  }, []);
   return (
     <>
       <img
+      id="hamburger-icon"
         className="hamburger-bar"
         onClick={toggleOpen}
         src={`${ReadyImagesURL}/hamburger-icon.png`}

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import AboutMe from "../AboutMe";
 import Contact from "../Contact";
-import FrontPage from "../FrontPage";
+import FrontPage from "../Home";
 import useIsInViewport from "../../Hooks/IsInViewPort";
 import MyProjects from "../MyProjects";
 import SlidingBar from "../../components/SlidingBar";

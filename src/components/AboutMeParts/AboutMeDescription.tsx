@@ -1,4 +1,4 @@
-import "./style.scss"
+import "./style.scss";
 
 export default function AboutMeDescription() {
   return (
@@ -10,20 +10,26 @@ export default function AboutMeDescription() {
         width: "100%",
       }}
     >
-      <div style={{width:'60%', display:'flex', justifyContent:'flex-end'}} className="very-large-font" id="about-header">About me</div>
+      <div
+        style={{ width: "60%", display: "flex", justifyContent: "flex-end" }}
+        className="very-large-font"
+        id="about-header"
+      >
+        About me
+      </div>
       <span className="about-story-text">
         <p>
           I'm <span className="light-dark">Kacper.</span>
         </p>
         <p>
-          My adventure with programming started like a year ago. I started
-          trying many languages to see which one is most suitable for me. And
-          currently I'm mostly focusing on
-          <span className="light-dark"> Front-End development.</span>
+          My adventure with programming started year ago. I have tried many
+          languages to find out which one will suit me the best. And this way I
+          have ended up in{" "}
+          <span className="light-dark">Front-End development.</span>
         </p>
         <p>
-          I did some my own projects to upgrade my skills. Now I have started
-          doing projects for studies on{" "}
+          I did some projects to upgrade my skills. During my front-end journey
+          I have created some other projects for{" "}
           <span className="light-dark">Warsaw University of Technology.</span>
         </p>
         <p>

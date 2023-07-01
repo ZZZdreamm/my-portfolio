@@ -1,5 +1,9 @@
 .projects-icons {
   cursor: pointer;
+  transition: all 0.5s;
+  &:hover{
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -17,6 +21,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
 }
 
 .project-left {
@@ -38,3 +43,4 @@
     margin: 10vh 0;
   }
 }
+
