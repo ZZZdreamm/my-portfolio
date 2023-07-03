@@ -19,7 +19,7 @@ const myProjects = [
     link: "https://zzzdreamm.github.io/Cacarrot/",
     description:
       "A game that allows you to create and play quizzes with others",
-    hoverImage: "cacarrot-1.png",
+    hoverImage: ["cacarrot-1.png", "cacarrot-2.png", "cacarrot-3.jpg"],
   },
   {
     icon: "social-media-icon.png",
@@ -28,11 +28,11 @@ const myProjects = [
     link: "https://zzzdreamm.github.io/social-app/",
     description:
       "A social media app that allows you to post and comment, like, dislike, and delete posts.",
-    hoverImage: "friendLink-1.png",
+    hoverImage: ["friendLink-1.png", "friendLink-2.jpg", "friendLink-3.jpg"],
   },
 ];
 export default function MyProjects() {
-  const [hoveredImage, setHoveredImage] = useState("");
+  const [hoveredImage, setHoveredImage] = useState<string[]>([]);
   useEffect(() => {
     // let tl = gsap.timeline({
     //   // yes, we can add it to an entire timeline!
@@ -55,10 +55,10 @@ export default function MyProjects() {
 
 
 
-    const tl = gsap.timeline();
-    tl.from("project-1", { yPercent: -100 }).from("project-2", {
-      yPercent: 100,
-    });
+    // const tl = gsap.timeline();
+    // tl.from("project-1", { yPercent: 100 }).from("project-2", {
+    //   yPercent: 100,
+    // });
     let sections = gsap.utils.toArray(".project");
 
     gsap.to(sections, {
@@ -70,7 +70,6 @@ export default function MyProjects() {
         scrub: 1,
         snap: 1,
         start: "top top",
-        anticipatePin:3,
         // base vertical scrolling on how wide the container is so it feels more natural.
         //@ts-ignore
         end: () => "+=" + document.querySelector(".my-projects").offsetWidth,
@@ -84,7 +83,7 @@ export default function MyProjects() {
 
   return (
     <>
-      <ImageFollower projectImage={hoveredImage} />
+      <ImageFollower projectImages={hoveredImage} />
       <span id="projects"></span>
       <div
         className="my-projects change-color"
@@ -92,13 +91,12 @@ export default function MyProjects() {
           gridTemplateColumns: `repeat(${myProjects.length}, 100vw)`,
         }}
       >
-        {myProjects.map((project) => (
+        {myProjects && myProjects.map((project) => (
           <>
             <Project
               key={project.name}
               icon={project.icon!}
               name={project.name}
-              side={project.side!}
               link={project.link}
               description={project.description}
               setHoveredImage={setHoveredImage}

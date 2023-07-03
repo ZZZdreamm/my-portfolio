@@ -260,7 +260,7 @@ button {
     position: relative;
     width: 15rem;
     height: 5rem;
-    background-color: $border-color;
+    background-color: $color5;
     bottom: 4rem;
     right: 1rem;
     z-index: -1;
@@ -268,7 +268,7 @@ button {
     display: block;
   }
   &:hover {
-    background-color: $color4;
+    background-color: $color3;
   }
 }
 

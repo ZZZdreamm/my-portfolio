@@ -9,7 +9,6 @@ export default function Project({
   description,
   icon,
   name,
-  side,
   link,
   hoverImage,
   setHoveredImage,
@@ -35,8 +34,6 @@ export default function Project({
     }
   }
 
-
-
   return (
     <div className={`project`}>
       <div className="project-image">
@@ -48,8 +45,24 @@ export default function Project({
           onMouseEnter={(e) => {
             setHoveredImage(hoverImage);
           }}
+          onTouchMove={(e) => {
+            setHoveredImage(hoverImage);
+          }}
+          onTouchEnd={(e) => {
+            setHoveredImage([]);
+          }}
+          onTouchCancel={(e) => {
+            setHoveredImage([]);
+          }}
           onMouseLeave={(e) => {
-            setHoveredImage("");
+            console.log("leave");
+            setHoveredImage([]);
+          }}
+          onMouseOut={(e) => {
+            setHoveredImage([]);
+          }}
+          onBlur={(e) => {
+            setHoveredImage([]);
           }}
           onClick={handleClick}
         />
@@ -58,7 +71,7 @@ export default function Project({
       <div className="project-info">{description}</div>
       <div className="project-name medium-font">{name}</div>
       <div className="project-goTo">
-       <HrefButton link={link!}/>
+        <HrefButton link={link!} />
       </div>
     </div>
   );
@@ -66,9 +79,8 @@ export default function Project({
 export interface ProjectProps {
   icon: string;
   name: string;
-  side: string;
   description: string;
   link?: string;
-  hoverImage: string;
-  setHoveredImage: (image: string) => void;
+  hoverImage: string[];
+  setHoveredImage: (images: string[]) => void;
 }

@@ -30,6 +30,7 @@ export default function BubbleEffect({
   function expandOnScrollDown() {
     const container = refContainer.current as HTMLDivElement;
     if (!expandMore) return;
+    if(!container) return;
     if (window.scrollY > 0) {
       container.classList.add("bubbleEffectExpand");
     } else {

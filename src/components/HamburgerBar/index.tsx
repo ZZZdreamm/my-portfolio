@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
 import "./style.scss";
 import { ReadyImagesURL } from "../../publicPaths";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+let st = ScrollTrigger.create({});
 export default function HamburgerBar() {
   const [open, setOpen] = useState(false);
   function toggleOpen() {
     setOpen(!open);
   }
   const barStyle = open
-    ? { right: "0px" }
-    : { right: "-30vw", borderRadius: "75%" };
+    ? { left: "0px" }
+    : { left: "-30vw", borderRadius: "75%" };
 
   function scrollTo(elementId: string) {
     const element = document.getElementById(elementId);
     toggleOpen();
     setTimeout(() => {
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        });
-      }
+      // st.scroll(10000)
+      element!.scrollIntoView({
+        block: "start",
+        inline: "nearest",
+      });
     }, 1000);
   }
 
@@ -28,14 +30,14 @@ export default function HamburgerBar() {
     document.addEventListener("click", (e) => {
       //@ts-ignore
       if (e.target!.id != "hamburger-bar" && e.target!.id != "hamburger-icon") {
-        setOpen(false)
+        setOpen(false);
       }
     });
   }, []);
   return (
     <>
       <img
-      id="hamburger-icon"
+        id="hamburger-icon"
         className="hamburger-bar"
         onClick={toggleOpen}
         src={`${ReadyImagesURL}/hamburger-icon.png`}

@@ -1,20 +1,20 @@
 import { ReadyImagesURL } from "../../publicPaths";
 import MouseFollower from "../../utils/MouseFollower";
+import InfiniteScrollingImages from "../../utils/InfiniteScrollingImages";
 import "./style.scss";
 interface ImageFollowerProps {
-  projectImage: string;
+  projectImages: string[];
 }
 
-export default function ImageFollower({ projectImage }: ImageFollowerProps) {
-  console.log(projectImage)
+export default function ImageFollower({ projectImages }: ImageFollowerProps) {
   return (
-    <MouseFollower
-      children={
-        <div id="following-image" className="following-image">
-          <img src={`${ReadyImagesURL}/${projectImage}`} alt=""/>
-        </div>
-      }
-      classHover="projects-icons"
-    />
+    <>
+      {projectImages && projectImages.length > 0 && (
+        <MouseFollower
+          children={<InfiniteScrollingImages images={projectImages} />}
+          classHover="projects-icons"
+        />
+      )}
+    </>
   );
 }

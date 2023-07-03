@@ -1,7 +1,5 @@
 @import "../../variables.scss";
 
-
-
 .container {
   display: flex;
   flex-direction: row;
@@ -18,9 +16,8 @@
   position: relative;
   // background: $color1;
 
-  ul {
+  .js-slider {
     z-index: 2;
-
     padding: 0;
     margin: 0;
     list-style: none;
@@ -32,7 +29,9 @@
     will-change: transform;
     height: 100%;
     font-size: 5rem;
-    li {
+    .item {
+      position: relative;
+      flex: 1;
       padding: 5rem;
       height: 100%;
       display: flex;

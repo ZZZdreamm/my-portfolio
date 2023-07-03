@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./styles.scss";
 
-export default function SlidingBar() {
+export default function Carousel() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   useEffect(() => {
     function handleResize() {
@@ -21,7 +21,7 @@ export default function SlidingBar() {
 
       const sliders = document.querySelectorAll(".js-slider");
 
-      sliders.forEach((slider: Element, index: number) => {
+      sliders.forEach((slider: Element) => {
         slider.remove();
       });
       wrapSlider.appendChild(sliderrr);
@@ -136,13 +136,6 @@ export default function SlidingBar() {
 
       requestAnimationFrame(start);
     }
-
-    // wrapSlider.addEventListener("mouseover", () => {
-    //   isPaused = true;
-    // });
-    // wrapSlider.addEventListener("mouseout", () => {
-    //   isPaused = false;
-    // });
 
     start();
   }, [windowSize]);

@@ -6,6 +6,7 @@ import WaterDrop from "../../components/WaterDrop";
 import EnterFromLeft from "../../components/EnterOnScreen/EnterFromLeft";
 import BubbleEffect from "../../components/BubbleEffect";
 import EnterFromRight from "../../components/EnterOnScreen/EnterFromRight";
+import Portal from "../../utils/Portal";
 
 export default function FrontPage() {
   const [windowSize, setWindowSize] = useState(window.innerWidth);
@@ -19,17 +20,19 @@ export default function FrontPage() {
   return (
     <div id="home" className="front-page">
       <div className="front-page-con">
-        <div className="bubblesContainer">
-          <BubbleEffect
-            color="#a8e6cf"
-            position={{ right: "20vw", top: "20vh" }}
-          ></BubbleEffect>
-          <BubbleEffect
-            color="#e4dfb7"
-            position={{ left: "20vw", top: "80vh" }}
-            expandMore={true}
-          ></BubbleEffect>
-        </div>
+        <Portal>
+          <div className="bubblesContainer">
+            <BubbleEffect
+              color="#a8e6cf"
+              position={{ right: "20vw", top: "20vh" }}
+            ></BubbleEffect>
+            <BubbleEffect
+              color="#e4dfb7"
+              position={{ left: "20vw", top: "80vh" }}
+              expandMore={true}
+            ></BubbleEffect>
+          </div>
+        </Portal>
 
         <div className="front-page-content">
           <EnterFromRight>

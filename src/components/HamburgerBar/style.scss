@@ -6,7 +6,7 @@
   background-color: $color4;
   position: fixed;
   top: 2rem;
-  right: 2rem;
+  left: 2rem;
   border-radius: 50%;
   z-index: 100;
   display: flex;
@@ -22,7 +22,7 @@
 }
 .bar {
   position: fixed;
-  right: -30vw;
+  left: -30vw;
   height: 100vh;
   background-color: $color2;
   transition: all 1s ease-in-out;

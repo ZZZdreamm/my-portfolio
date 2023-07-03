@@ -38,11 +38,11 @@ export default function StairsSocials() {
   return (
     <div className="contact-socials">
       <div id="socials-container" className="socials-container">
-        {perspectiveLines.map((line) => (
+        {perspectiveLines.map((line, index) => (
           <>
             {line.multiplier % 2 == 1 ? (
               <PerspectiveLine
-                key={line.text}
+                key={line.multiplier}
                 text={line.text!}
                 subtext={line.subtext!}
                 href={line.href}
@@ -52,7 +52,7 @@ export default function StairsSocials() {
               />
             ) : (
               <PerspectiveLine
-                key={line.text}
+                key={line.multiplier}
                 text={line.text!}
                 subtext={line.subtext!}
                 href={line.href}

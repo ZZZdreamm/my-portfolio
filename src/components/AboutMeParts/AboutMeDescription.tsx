@@ -2,7 +2,7 @@ import "./style.scss";
 
 export default function AboutMeDescription() {
   return (
-    <p
+    <div
       style={{
         display: "flex",
         flexDirection: "column",
@@ -43,6 +43,6 @@ export default function AboutMeDescription() {
           me
         </p>
       </span>
-    </p>
+    </div>
   );
 }

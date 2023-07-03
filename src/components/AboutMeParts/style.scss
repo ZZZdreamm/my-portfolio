@@ -33,6 +33,9 @@
   font-size: 1.2em;
   flex-direction: column;
   align-items: flex-start;
+  p{
+    margin: 1rem 0;
+  }
 }
 
 #about-header {
@@ -71,7 +74,8 @@
 }
 
 .skills-image {
-  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  // clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  border-radius: 50%;
   width: 50%;
   height: 50%;
   position: absolute;
@@ -81,23 +85,46 @@
   border: 1px solid black;
   cursor: pointer;
   &-1 {
-    left: 0;
+    left: -10%;
     bottom: 0;
   }
   &-2 {
-    left: 50%;
+    left: 60%;
     bottom: 0;
   }
   &-3 {
-    bottom: 50%;
+    bottom: 65%;
     left: 25%;
   }
   &-4 {
     transform: rotate(180deg);
-    bottom: 0%;
+    bottom: 25%;
     left: 25%;
-    cursor: default;
+    z-index: 7;
   }
+  &-5 {
+    left: -12.5%;
+    bottom: 40%;
+  }
+  &-6 {
+    left: 62.5%;
+    bottom: 40%;
+  }
+  &-7 {
+    bottom: -15%;
+    left: 25%;
+  }
+  &-8{
+    transform: rotate(180deg);
+    bottom: 37.5%;
+    left: 37.5%;
+    z-index: 8;
+    width: 25%;
+    height: 25%;
+  }
+}
+.above{
+  z-index:10
 }
 
 @media screen and (max-width: 600px) {
@@ -111,7 +138,7 @@
 }
 @media screen and (min-width: 600px) {
   .mySkills-container {
-    height: 30rem;
+    height: 40rem;
     position: relative;
   }
   .svg-container {
@@ -121,15 +148,42 @@
 
 @media screen and (max-width: 600px) {
   .mySkills-container {
-    height: 60rem;
+    height: 65rem;
   }
   .svg-container {
     position: absolute;
-    top: 0;
+    bottom: 27%;
+    position: relative;
   }
   .displayedSkills {
     position: absolute;
-    top:55%;
+    top:48%;
     margin-top: 5%;
   }
 }
+
+.mySkills-container{
+  padding: 5%;
+  background-color: $color3;
+  border-radius: 2rem;
+  border: 1px solid $border-color;
+}
+
+.aboutSkills-text{
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutSkills-text{
+  font-size: 0.8em;
+
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutSkills-text{
+  font-size: 1em;
+
+  }
+}
+

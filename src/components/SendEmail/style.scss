@@ -135,7 +135,7 @@
   }
 }
 
-$button-width: 150px;
+$button-width: 100px;
 $spinner-width: $button-width/6;
 $blue: #0076d3;
 $btn-bg: #0076d3;
@@ -159,12 +159,11 @@ $text-light: #fefefe;
   min-width: $button-width;
   height: $button-width/2.2;
   margin: 20px auto;
-  background-color: black;
-  color: white;
+  background-color: $color5;
+  color: $white2;
   border: 1px solid #aaa;
   &:hover {
-    color: $red;
-    background-color: black;
+    color: $text-black;
   }
 
   font-size: 1.2em;
