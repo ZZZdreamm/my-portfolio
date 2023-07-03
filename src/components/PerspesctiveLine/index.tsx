@@ -36,7 +36,6 @@ export default function PerspectiveLine({
       const fontS = window.getComputedStyle(socialsContainer).fontSize;
       const [siz, _] = fontS.split(".");
       const intSize = parseInt(siz);
-      console.log(intSize);
       setStyle({
         left: `${intSize * (multiplier - 1)}px`,
       });

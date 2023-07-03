@@ -21,14 +21,20 @@ export default function SendEmail() {
           (result) => {
             setTimeout(() => {
               setMessage("Message has been sent!");
+              form.current?.childNodes.forEach((child) => {
+                //@ts-ignore
+                child.value = "";
+              });
             }, 2000);
             setMessageEffect(true);
+
           },
           (error: any) => {
             setTimeout(() => {
               setMessage("There has been error... :(");
             }, 2000);
             setMessageEffect(false);
+
           }
         );
     } else {
@@ -57,7 +63,7 @@ export default function SendEmail() {
   useEffect(() => {
     if (!buttonSub) return;
     function buttonCLickEventHandler(e: any) {
-      setMessage("")
+      setMessage("");
       animateButton(e);
       sendEmail(e);
     }
@@ -71,10 +77,9 @@ export default function SendEmail() {
       e.target.classList.add("animate");
       setTimeout(function () {
         e.target.classList.remove("animate");
-      }, 6000);
+      }, 4000);
     };
-
-    buttonSub!.addEventListener("click", buttonCLickEventHandler, false);
+    buttonSub!.addEventListener("click", buttonCLickEventHandler);
   }, [buttonSub]);
 
   const buttonClass = messageEffect == true ? "success" : "error";

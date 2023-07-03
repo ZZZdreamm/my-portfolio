@@ -1,7 +1,9 @@
+@import '../../variables.scss';
+
 .hamburger-bar {
   height: 4rem;
   width: 4rem;
-  background-color: white;
+  background-color: $color4;
   position: fixed;
   top: 2rem;
   right: 2rem;
@@ -22,7 +24,7 @@
   position: fixed;
   right: -30vw;
   height: 100vh;
-  background-color: #fff;
+  background-color: $color2;
   transition: all 1s ease-in-out;
   z-index: 50;
   &-content {

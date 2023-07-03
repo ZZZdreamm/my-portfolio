@@ -40,9 +40,9 @@ export default function AboutMeSkills() {
   function changeSkillsType(element: any, type: string, color: string) {
     const allElements = document.querySelectorAll(".skills-image");
     allElements.forEach((element) => {
-      element.classList.remove("yellow");
       element.classList.remove("green");
-      element.classList.remove("blue");
+      element.classList.remove("fuschia");
+      element.classList.remove("blue3");
     });
     element.classList.add(color);
     setSkillsType(type);
@@ -54,29 +54,29 @@ export default function AboutMeSkills() {
       <div className="fullSize flex-center" style={{position:'relative'}}>
         <div className="svg-container">
           <div
-            className="skills-image skills-image-3 yellow"
+            className="skills-image skills-image-3 fuschia"
             onClick={(e) =>
-              changeSkillsType(e.target, "Frontend skills", "yellow")
+              changeSkillsType(e.target, "Frontend skills", "fuschia")
             }
           ></div>
           <div
             className="skills-image skills-image-1"
             onClick={(e) =>
-              changeSkillsType(e.target, "Backend skills", "blue")
+              changeSkillsType(e.target, "Backend skills", "green")
             }
           ></div>
           <div
             className="skills-image skills-image-2"
-            onClick={(e) => changeSkillsType(e.target, "Known bonus tools", "green")}
+            onClick={(e) => changeSkillsType(e.target, "Known bonus tools", "blue3")}
           ></div>
 
           <div
-            className="skills-image skills-image-4 fuschia"
+            className="skills-image skills-image-4 yellow"
           ></div>
         </div>
       </div>
       <div className="displayedSkills fullSize">
-        <h1 id="about-header">{skillsType}</h1>
+        <h1 className="about-header">{skillsType}</h1>
         <span className="about-story-skills" >
           {mySkills &&
             mySkills.map((skill: any) => (

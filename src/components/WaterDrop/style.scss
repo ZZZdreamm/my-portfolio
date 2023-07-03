@@ -1,0 +1,109 @@
+@import "../../variables.scss";
+.move {
+  margin: 175px auto;
+}
+
+.drop {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: -30px;
+  margin: 0 auto;
+  background: #fff;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-animation-name: drip;
+  -webkit-animation-name: drip;
+  animation-name: drip;
+  -moz-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: once;
+}
+
+.drop:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 30px solid rgba(255, 255, 255, 1);
+  top: -22px;
+}
+
+.wave {
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  top: 45%;
+  width: 2px;
+  height: 1px;
+  background-color: $very-light-blue;
+  border: #fff 7px solid;
+  border-radius: 50%;
+  -moz-animation-name: ripple;
+  -webkit-animation-name: ripple;
+  animation-name: ripple;
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 10s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: once;
+  transform-origin: center;
+  transform: translateX(-50%) translateY(-30%);
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+  }
+  to {
+    width: 100vw;
+    height: 100vw;
+    top: 10vw;
+    border-width: 1px;
+    opacity: 0;
+  }
+}
+
+// @keyframes ripple-2 {
+//   0% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+//   100% {
+//     width: 33vw;
+//     height: 16vw;
+//     border-width: 1px;
+//     top: 40%;
+//     left: 40%;
+//   }
+// }
+
+@keyframes drip {
+  to {
+    top: 45%;
+  }
+}
+
+.waterDropContainer {
+  position: absolute;
+  background-color: $very-light-blue;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

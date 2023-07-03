@@ -1,3 +1,4 @@
+@import "../../variables.scss";
 .about-me {
   padding: 2vh 2vw;
   // height: 100%;
@@ -8,12 +9,20 @@
   border-image-slice: 30;
   gap: 3em;
   padding-bottom: 5em;
+  // background-color: $color1;
+  border-image-source: linear-gradient(to right, $color1, $color2);
+  font-size: 1.5rem;
+  &-content {
+    position: relative;
+    z-index: 3;
+  }
 }
 .about-me-text {
   display: flex;
   flex-direction: column;
   font: inherit;
   align-items: center;
+  color: $text-black;
 }
 .about-me-img {
   padding: 2% 10%;

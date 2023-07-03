@@ -11,7 +11,8 @@ export default function Contact() {
           <SendEmail />
         </section>
         <button
-          id="resume-link"
+          // id="resume-link"
+          className="button"
           onClick={() => {
             window.open(
               "https://drive.google.com/file/d/1gcQ-NmrmqNT01nSIOfE8LAW7bV9S5svi/view?usp=sharing"

@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+.following-image {
+  height:100%;
+  width: 100%;
+  background-color: $white;
+  // opacity: 0.5;
+  z-index: -1;
+  border: 1px solid $black;
+  box-shadow: 0 0 10px 10px $white;
+  transition: all 0.5s ease-in-out;
+  &.active {
+    opacity: 1;
+    box-shadow: 0 0 10px 10px $blue;
+  }
+  img{
+    width: 30rem;
+    height: 20rem;
+    z-index: 30;
+  }
+}

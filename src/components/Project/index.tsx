@@ -1,13 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import useIsInViewport from "../../Hooks/IsInViewPort";
 import { ReadyImagesURL } from "../../publicPaths";
+import HrefButton from "../../utils/HrefButton";
 import "./style.scss";
 import UseWindowSize from "../../Hooks/WindowSizeChanged";
 
-export default function Project({ icon, name, side, link }: ProjectProps) {
+export default function Project({
+  description,
+  icon,
+  name,
+  side,
+  link,
+  hoverImage,
+  setHoveredImage,
+}: ProjectProps) {
   const ref = useRef<HTMLImageElement>(null);
-  const [marginStyle, setMarginStyle] = useState("0 0 0 0");
-  const windowSize = UseWindowSize(marginMove);
 
   var scrolledToAbout = useIsInViewport(ref, "200px");
   useEffect(() => {
@@ -22,41 +29,37 @@ export default function Project({ icon, name, side, link }: ProjectProps) {
       blurImg.classList.add("blur");
     }
   }
-
   function handleClick() {
     if (link) {
       window.open(link, "_blank");
     }
   }
 
-  function marginMove(windowSize: number) {
-    let margin = 0;
-    if (windowSize < 600) {
-      margin = 0;
-    } else if (windowSize < 800) {
-      margin = 5;
-    } else if (windowSize < 1200) {
-      margin = 10;
-    }else {
-      margin = 15
-    }
-    if(side === "left"){
-      setMarginStyle(`0 0 0 ${margin}%`)
-    }else{
-      setMarginStyle(`0 ${margin}% 0 0`)
-    }
-  }
+
 
   return (
-    <div className={`project project-${side}`} style={{ margin: marginStyle }}>
-      <img
-        ref={ref}
-        className="projects-icons"
-        src={`${ReadyImagesURL}/${icon}`}
-        alt={name}
-        onClick={handleClick}
-      />
-      <h2 style={{ margin: "0", fontSize: "2.5rem" }}>{name}</h2>
+    <div className={`project`}>
+      <div className="project-image">
+        <img
+          ref={ref}
+          className="projects-icons"
+          src={`${ReadyImagesURL}/${icon}`}
+          alt={name}
+          onMouseEnter={(e) => {
+            setHoveredImage(hoverImage);
+          }}
+          onMouseLeave={(e) => {
+            setHoveredImage("");
+          }}
+          onClick={handleClick}
+        />
+      </div>
+
+      <div className="project-info">{description}</div>
+      <div className="project-name medium-font">{name}</div>
+      <div className="project-goTo">
+       <HrefButton link={link!}/>
+      </div>
     </div>
   );
 }
@@ -64,5 +67,8 @@ export interface ProjectProps {
   icon: string;
   name: string;
   side: string;
+  description: string;
   link?: string;
+  hoverImage: string;
+  setHoveredImage: (image: string) => void;
 }

@@ -6,10 +6,12 @@ export default function AboutMe() {
   return (
     <>
       <div id="about" className="about-me">
-        <div className="about-me-text">
-          <div className="about-story">
-            <AboutMeDescription />
-            <AboutMeSkills />
+        <div className="about-me-content">
+          <div className="about-me-text">
+            <div className="about-story">
+              <AboutMeDescription />
+              <AboutMeSkills />
+            </div>
           </div>
         </div>
       </div>

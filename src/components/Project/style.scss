@@ -1,14 +1,15 @@
+@import "../../variables.scss";
+
 .projects-icons {
   cursor: pointer;
   transition: all 0.5s;
-  &:hover{
-    transform: scale3d(1.2, 1.2, 1.2);
-  }
+  display: flex;
 }
 
 @media screen and (max-width: 600px) {
   .projects-icons {
-    width: 60vw;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 @media screen and (min-width: 600px) {
@@ -17,30 +18,97 @@
   }
 }
 
+@media screen and (max-width:600px){
+  .project{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    padding: 15vh 5vw 10vh 5vw;
+  }
+}
+@media screen and (min-width:600px){
+  .project{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60% 40%;
+    padding: 15vh 10vw 10vh 10vw;
+  }
+}
+
 .project {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  display: grid;
 
-}
+  height: 120vh;
+  width: 100vw;
+  box-sizing: border-box;
+  color: $text-black;
+  scroll-snap-align: start;
+  &-image{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-info {
+    padding: 10%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.project-left {
-  align-items: flex-start;
-  align-self: flex-start;
-}
-.project-right {
-  align-items: flex-end;
-  align-self: flex-end;
-}
+  }
+  &-name {
+    padding: 10%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  &-goTo{
+    padding: 10%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
 
-@media screen and (max-width: 600px) {
-  .project {
-    margin: 5vh 0;
   }
 }
-@media screen and (min-width: 600px) {
-  .project {
-    margin: 10vh 0;
+
+
+
+@media screen and (max-width:600px) {
+  .project-info{
+    font-size: 1.5rem;
   }
 }
 
+@media screen and (min-width:600px) and (max-width:1200px){
+  .project-info{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width:1200px) and (max-width:2600px){
+  .project-info{
+    font-size: 1.5rem;
+  }
+}
+
+
+// .project-left {
+//   align-items: flex-start;
+//   align-self: flex-start;
+// }
+// .project-right {
+//   align-items: flex-end;
+//   align-self: flex-end;
+// }
+
+// @media screen and (max-width: 600px) {
+//   .project {
+//     margin: 5vh 0;
+//   }
+// }
+// @media screen and (min-width: 600px) {
+//   .project {
+//     margin: 10vh 0;
+//   }
+// }

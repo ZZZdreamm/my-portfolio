@@ -1,3 +1,4 @@
+@import '../../variables.scss';
 .submit-button {
   background-color: rgb(242, 242, 246);
   color: rgb(4, 4, 4);
@@ -23,7 +24,7 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid #ffffff;
-  color: #ffffff;
+  color: $text-black;
   font-size: 1.4em;
   outline: none;
 }
@@ -152,14 +153,17 @@ $text-light: #fefefe;
   }
 }
 .email-button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: $button-width;
+  height: $button-width/2.2;
   margin: 20px auto;
   background-color: black;
   color: white;
   border: 1px solid #aaa;
   &:hover {
-    color: red;
+    color: $red;
     background-color: black;
   }
 

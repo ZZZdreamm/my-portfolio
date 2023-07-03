@@ -11,7 +11,7 @@ export default function AboutMeDescription() {
       }}
     >
       <div
-        style={{ width: "60%", display: "flex", justifyContent: "flex-end" }}
+        style={{display: "flex", justifyContent: "flex-end" }}
         className="very-large-font"
         id="about-header"
       >

@@ -1,9 +1,119 @@
+@import '../../_variables.scss';
+
+.bubblesContainer{
+  position: absolute;
+  width: 100vw;
+  z-index: 2;
+  overflow-x: hidden;
+  overflow-y: visible;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .bubblesContainer{
+    height: 500vh;
+  }
+}
+@media screen and (min-width: 1800px) and (max-width: 2600px) {
+  .bubblesContainer{
+    height: 500vh;
+  }
+}
+
+@media screen and (min-width: 2600px) {
+  .bubblesContainer{
+    height: 700vh;
+  }
+}
 .front-page {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  // display: flex;
   align-items: center;
-  background-color: black;
+  &-con{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    // overflow-x: hidden;
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+  }
+  &-content{
+    position: relative;;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    // grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    color: $white;
+    &__text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      width: 100%;
+      height: 100%;
+      &__inner{
+        font-size-adjust: 0.5;
+        width: 100%;
+        padding: 0 5%;
+        box-sizing: border-box;
+        span{
+          font-family: 'Garamond', sans-serif;
+        border-top: 0.2rem solid $white;
+
+        }
+      }
+    }
+  }
+}
+.front-page-color{
+  position: absolute;
+  background-color: $light-blue;
+  width: 40%;
+  height: 40%;
+  &-left{
+    top: 0;
+    left: 0;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: $border-color;
+    }
+  }
+  &-right{
+    bottom: 0;
+    right: 0;
+  }
+}
+.front-page-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  perspective: 2px;
+  animation: test 10s ease-in-out;
+  animation-delay: 1s;
+  z-index: 2;
+}
+@keyframes test{
+  0% {
+    transform: translateZ(0px);
+  }
+  100% {
+    transform: translateZ(2000px)
+  }
 }
 #front-page-image {
   width: 60vw;
@@ -22,7 +132,7 @@
 .page-text {
   cursor: pointer;
   font-weight: bold;
-  color: white;
+  color: $text-black;
   width: fit-content;
 }
 .page-text-changed {
@@ -63,3 +173,5 @@
     font-size: 1.5em;
   }
 }
+
+
