@@ -14,7 +14,7 @@ export default function EnterFromLeft({ children }: any) {
       gsap.fromTo(
         ".enter-container-left",
         { xPercent: -100 },
-        { xPercent: 0, duration: 1}
+        { xPercent: 0, duration: 1.5}
       );
     }
   }, [scrolledPageBottom]);

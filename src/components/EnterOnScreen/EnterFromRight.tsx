@@ -13,8 +13,8 @@ export default function EnterFromRight({ children }: any) {
       setFirst(true);
       gsap.fromTo(
         ".enter-container-right",
-        { xPercent: 100 },
-        { xPercent: 0, duration: 1}
+        { xPercent: 150 },
+        { xPercent: 0, duration: 1.5}
       );
     }
   }, [scrolledPageBottom]);
