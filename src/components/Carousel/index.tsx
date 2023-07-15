@@ -60,7 +60,6 @@ export default function Carousel() {
     const slider = document.querySelectorAll(".js-slider")[0] as HTMLElement;
     const sliderWidth = slider.offsetWidth;
 
-
     const iterationItems = Math.ceil((widthWrap + sliderWidth) / sliderWidth);
 
     // we clone number of slider we need
@@ -101,14 +100,13 @@ export default function Carousel() {
         let pos;
 
         let pixelsToMove = 1;
-        if(windowSize > 600){
+        if (windowSize > 600) {
           pixelsToMove = 3;
         }
         // if slider should be in movement
         if (stateList[i].start) {
           stateList[i].pos -= pixelsToMove;
           pos = stateList[i].pos;
-
           slider.style.transform = `translate(${pos}px, 0%)`;
         }
 
@@ -138,6 +136,7 @@ export default function Carousel() {
     }
 
     start();
+   
   }, [windowSize]);
 
   return (
