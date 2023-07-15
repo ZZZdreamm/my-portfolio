@@ -38,8 +38,10 @@ export default function MouseFollower({
       xTo(e.touches[0].clientX);
       yTo(e.touches[0].clientY);
     });
-    
+
   }, []);
+
+
   return (
     <>
       {children && (
