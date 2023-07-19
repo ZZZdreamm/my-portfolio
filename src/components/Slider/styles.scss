@@ -1,0 +1,47 @@
+@import "../../variables.scss";
+
+@mixin white-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+$animationSpeed: 40s;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-35rem * 10));
+  }
+}
+.slider {
+  height: 8rem;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  color: #555;
+
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(35rem * 20);
+  }
+
+  .slide {
+    height: 8rem;
+    width: 35rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+  }
+}
