@@ -29,8 +29,6 @@ export default function InfiniteScrollingImages({
     if (!images) return;
     setCurrentImageIndex(0);
   }, [images]);
-  console.log(currentImageIndex);
-  console.log(images[currentImageIndex]);
 
 
 

@@ -30,9 +30,10 @@
 }
 
 .perspective-move {
-  transform: translateY(-5rem);
-  transition: transform 1s ease-in-out;
+  // transform: translateY(-5rem);
+  transition: transform 0.5s ease-in-out;
 }
+
 
 .social-ref {
   font-size: 0.8em;
