@@ -12,23 +12,24 @@ ScrollTrigger.normalizeScroll(true);
 
 const myProjects = [
   {
+    icon: "social-media-icon.png",
+    name: "Social media app",
+    link: "https://zzzdreamm.github.io/social-app/",
+    description:
+      "A social media app that allows you to post and comment, like, dislike, and delete posts.",
+    hoverImage: ["social-app3.png", "friendLink-3.jpg", "friendLink-1.png", "friendLink-2.jpg"],
+    side: "left",
+  },
+  {
     icon: "kahoot-icon.webp",
     name: "Kahoot like game",
     link: "https://zzzdreamm.github.io/Cacarrot/",
     description:
       "A game that allows you to create and play quizzes with others",
     hoverImage: ["cacarrot-1.png", "cacarrot-2.png", "cacarrot-3.jpg"],
-    side:'left',
+    side: "right",
   },
-  {
-    icon: "social-media-icon.png",
-    name: "Social media app",
-    link: "https://zzzdreamm.github.io/social-app/",
-    description:
-      "A social media app that allows you to post and comment, like, dislike, and delete posts.",
-    hoverImage: ["friendLink-1.png", "friendLink-2.jpg", "friendLink-3.jpg"],
-    side:'right',
-  },
+
   {
     icon: "news-icon.png",
     name: "News app",
@@ -36,7 +37,7 @@ const myProjects = [
     description:
       "A news app which allows searching internet for most recent news on topic of your choice.",
     hoverImage: ["hot-news-1.png", "hot-news-2.png", "hot-news-3.png"],
-    side:'left',
+    side: "left",
   },
 ];
 export default function MyProjects() {
@@ -60,16 +61,17 @@ export default function MyProjects() {
   //   });
   // }, []);
 
-
   return (
     <>
       <ImageFollower projectImages={hoveredImage} />
       <span id="projects"></span>
       <div
         className="my-projects change-color"
-        style={{
-          // gridTemplateColumns: `repeat(${myProjects.length}, 100vw)`,
-        }}
+        style={
+          {
+            // gridTemplateColumns: `repeat(${myProjects.length}, 100vw)`,
+          }
+        }
       >
         {myProjects &&
           myProjects.map((project) => (
