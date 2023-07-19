@@ -1,5 +1,5 @@
-@import '../../variables.scss';
-
+@import "../../variables.scss";
+$main-color: #23abd4;
 .hamburger-bar {
   height: 4rem;
   width: 4rem;
@@ -27,6 +27,7 @@
   background-color: $color2;
   transition: all 1s ease-in-out;
   z-index: 50;
+  top: 0;
   &-content {
     margin-top: 8rem;
     display: flex;
@@ -36,6 +37,47 @@
       flex-direction: column;
       align-items: center;
       &__item {
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        font-family: "Open Sans";
+        font-size: 26px;
+        line-height: 1;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(
+          to right,
+          $main-color,
+          $main-color 50%,
+          #000 50%
+        );
+        background-size: 200% 100%;
+        background-position: -100%;
+        transition: all 0.3s ease-in-out;
+        &:before {
+          display: block;
+          content: "";
+          width: 0;
+          height: 3px;
+          bottom: 5px;
+          left: 0;
+          bottom: -3px;
+          z-index: 0;
+          position: absolute;
+          background: $main-color;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          background-position: 0%;
+          &:before {
+            width: 100%;
+          }
+        }
+
         margin: 1rem 0;
         font-size: 2rem;
         font-weight: 600;
@@ -43,9 +85,6 @@
         text-decoration: none;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
-        &:hover {
-          color: #ccc;
-        }
       }
     }
   }
@@ -55,11 +94,9 @@
   .bar {
     width: 30vw;
   }
-
 }
 @media screen and (min-width: 1200px) {
   .bar {
     width: 20rem;
   }
-
 }
