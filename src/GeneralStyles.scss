@@ -295,3 +295,47 @@ button {
 .bold-font {
   font-weight: 700;
 }
+
+
+.fadeIn{
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fadeIn.appear{
+  opacity: 1;
+}
+
+.slideIn{
+
+}
+
+.from-left{
+  transform: translateX(-50vw);
+}
+
+.from-right{
+  transform: translateX(50vw);
+}
+
+.from-left,
+.from-right{
+  transition: transform 750ms ease-in;
+}
+
+.from-left.appear,
+.from-right.appear{
+  transform: translateX(0);
+}
+
+.from-bottom{
+  transform: translateY(50%);
+}
+
+.from-bottom{
+  transition: transform 0.5s ease-in;
+}
+
+.from-bottom.appear{
+  transform: translateY(0);
+}

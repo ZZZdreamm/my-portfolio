@@ -39,7 +39,7 @@ export default function AboutMeSkills() {
 
   return (
     <div
-      className="mySkills-container flex-center full-width"
+      className="mySkills-container flex-center full-width fadeIn from-bottom"
       style={{ position: "relative" }}
     >
       <div className="fullSize flex-center" style={{ position: "relative" }}>

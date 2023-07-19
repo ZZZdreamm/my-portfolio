@@ -127,12 +127,12 @@ export default function SendEmail() {
           <span id="send-email-result" className={messageColor}>
             {message}
           </span>
-          <div className="loader">
+          {/* <div className="loader">
             <div className="check">
               <span className="check-one"></span>
               <span className="check-two"></span>
             </div>
-          </div>
+          </div> */}
         </div>
       </form>
     </div>

@@ -21,7 +21,7 @@
 @media screen and (max-width:600px){
   .project{
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 80% 20%;
     padding: 15vh 5vw 10vh 5vw;
   }
 }
@@ -30,14 +30,13 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 60% 40%;
     padding: 15vh 10vw 10vh 10vw;
+    height: 100vh;
+    width: 100vw;
   }
 }
 
 .project {
   display: grid;
-
-  height: 120vh;
-  width: 100vw;
   box-sizing: border-box;
   color: $text-black;
   scroll-snap-align: start;
@@ -93,6 +92,8 @@
 }
 
 
+
+
 // .project-left {
 //   align-items: flex-start;
 //   align-self: flex-start;
@@ -112,3 +113,14 @@
 //     margin: 10vh 0;
 //   }
 // }
+
+
+.blur{
+  filter: blur(20px);
+  transform: scale(1.4);
+  transition: all 0s;
+}
+
+.right{
+  justify-self: flex-end;
+}

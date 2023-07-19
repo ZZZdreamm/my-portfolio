@@ -35,48 +35,46 @@ export default function FrontPage() {
         </Portal>
 
         <div className="front-page-content">
-          <EnterFromRight>
-            <div className="front-page-content__text">
-              <h1
-                className="front-page-content__text__inner"
-                style={{ textAlign: "end" }}
-              >
-                <span>FOLIO OF KACPER</span>
-              </h1>
-            </div>
-          </EnterFromRight>
-          <EnterFromLeft>
-            <div className="front-page-content__text">
-              <h1
-                className="front-page-content__text__inner"
-                style={{ textAlign: "start" }}
-              >
-                <span>CLEAR CODE</span>
-              </h1>
-            </div>
-          </EnterFromLeft>
-
-          <EnterFromRight>
-            <div className="front-page-content__text">
-              <h1
-                className="front-page-content__text__inner"
-                style={{ textAlign: "end" }}
-              >
-                <span>NICE DESIGN</span>
-              </h1>
-            </div>
-          </EnterFromRight>
-
-          <EnterFromLeft>
-            <div className="front-page-content__text">
-              <h1
-                className="front-page-content__text__inner"
-                style={{ textAlign: "start" }}
-              >
-                <span>Frontend Developer</span>
-              </h1>
-            </div>
-          </EnterFromLeft>
+          {/* <EnterFromRight> */}
+          <div className="front-page-content__text fadeIn from-right">
+            <h1
+              className="front-page-content__text__inner"
+              style={{ textAlign: "end" }}
+            >
+              <span>FOLIO OF KACPER</span>
+            </h1>
+          </div>
+          {/* </EnterFromRight> */}
+          {/* <EnterFromLeft> */}
+          <div className="front-page-content__text fadeIn from-left">
+            <h1
+              className="front-page-content__text__inner"
+              style={{ textAlign: "start" }}
+            >
+              <span>CLEAR CODE</span>
+            </h1>
+          </div>
+          {/* </EnterFromLeft> */}
+          {/* <EnterFromRight> */}
+          <div className="front-page-content__text fadeIn from-right">
+            <h1
+              className="front-page-content__text__inner"
+              style={{ textAlign: "end" }}
+            >
+              <span>NICE DESIGN</span>
+            </h1>
+          </div>
+          {/* </EnterFromRight> */}
+          {/* <EnterFromLeft> */}
+          <div className="front-page-content__text fadeIn from-left">
+            <h1
+              className="front-page-content__text__inner"
+              style={{ textAlign: "start" }}
+            >
+              <span>Frontend Developer</span>
+            </h1>
+          </div>
+          {/* </EnterFromLeft> */}
         </div>
       </div>
     </div>

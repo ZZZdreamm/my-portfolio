@@ -9,6 +9,7 @@ export default function AboutMeDescription() {
         alignItems: "center",
         width: "100%",
       }}
+      className="fadeIn from-bottom"
     >
       <div
         style={{display: "flex", justifyContent: "flex-end" }}

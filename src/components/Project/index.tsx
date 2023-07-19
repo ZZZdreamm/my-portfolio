@@ -6,6 +6,7 @@ import "./style.scss";
 import UseWindowSize from "../../Hooks/WindowSizeChanged";
 
 export default function Project({
+  side = "left",
   description,
   icon,
   name,
@@ -15,7 +16,7 @@ export default function Project({
 }: ProjectProps) {
   const ref = useRef<HTMLImageElement>(null);
 
-  var scrolledToAbout = useIsInViewport(ref, "200px");
+  var scrolledToAbout = useIsInViewport(ref, "100px");
   useEffect(() => {
     if (scrolledToAbout === undefined) return;
     blurEffect(ref.current, scrolledToAbout);
@@ -23,10 +24,15 @@ export default function Project({
 
   function blurEffect(blurImg: any, ifIn: boolean) {
     if (ifIn) {
-      blurImg.classList.remove("blur");
+      setTimeout(() => {
+        blurImg.classList.remove("blur");
+      }, 200);
     } else {
-      blurImg.classList.add("blur");
+      setTimeout(() => {
+        blurImg.classList.add("blur");
+      }, 200);
     }
+    // }
   }
   function handleClick() {
     if (link) {
@@ -35,48 +41,78 @@ export default function Project({
   }
 
   return (
-    <div className={`project`}>
-      <div className="project-image">
-        <img
-          ref={ref}
-          className="projects-icons"
-          src={`${ReadyImagesURL}/${icon}`}
-          alt={name}
-          onMouseEnter={(e) => {
-            setHoveredImage(hoverImage);
-          }}
-          onTouchMove={(e) => {
-            setHoveredImage(hoverImage);
-          }}
-          onTouchEnd={(e) => {
-            setHoveredImage([]);
-          }}
-          onTouchCancel={(e) => {
-            setHoveredImage([]);
-          }}
-          onMouseLeave={(e) => {
-            console.log("leave");
-            setHoveredImage([]);
-          }}
-          onMouseOut={(e) => {
-            setHoveredImage([]);
-          }}
-          onBlur={(e) => {
-            setHoveredImage([]);
-          }}
-          onClick={handleClick}
-        />
-      </div>
+    <div className={`project fadeIn from-${side}`}>
+      {side === "left" ? (
+        <>
+          <div className="project-image">
+            <img
+              ref={ref}
+              className="projects-icons"
+              src={`${ReadyImagesURL}/${icon}`}
+              alt={name}
+              onMouseEnter={(e) => {
+                setHoveredImage(hoverImage);
+              }}
+              onTouchMove={(e) => {
+                setHoveredImage(hoverImage);
+              }}
+              onMouseLeave={(e) => {
+                setHoveredImage([]);
+              }}
+              onMouseOut={(e) => {
+                setHoveredImage([]);
+              }}
+              onBlur={(e) => {
+                setHoveredImage([]);
+              }}
+              onClick={handleClick}
+            />
+          </div>
 
-      <div className="project-info">{description}</div>
-      <div className="project-name medium-font">{name}</div>
-      <div className="project-goTo">
-        <HrefButton link={link!} />
-      </div>
+          <div className="project-info">{description}</div>
+          <div className="project-name medium-font">{name}</div>
+          <div className="project-goTo">
+            <HrefButton link={link!} />
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="project-info">{description}</div>
+          <div className="project-image">
+            <img
+              ref={ref}
+              className="projects-icons"
+              src={`${ReadyImagesURL}/${icon}`}
+              alt={name}
+              onMouseEnter={(e) => {
+                setHoveredImage(hoverImage);
+              }}
+              onTouchMove={(e) => {
+                setHoveredImage(hoverImage);
+              }}
+              onMouseLeave={(e) => {
+                setHoveredImage([]);
+              }}
+              onMouseOut={(e) => {
+                setHoveredImage([]);
+              }}
+              onBlur={(e) => {
+                setHoveredImage([]);
+              }}
+              onClick={handleClick}
+            />
+          </div>
+          <div className="project-goTo right">
+            <HrefButton link={link!} />
+          </div>
+          <div className="project-name medium-font">{name}</div>
+        </>
+      )}
     </div>
   );
 }
 export interface ProjectProps {
+  side: string;
   icon: string;
   name: string;
   description: string;

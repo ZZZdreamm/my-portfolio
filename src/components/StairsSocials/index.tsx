@@ -36,7 +36,7 @@ export default function StairsSocials() {
     },
   ];
   return (
-    <div className="contact-socials">
+    <div className="contact-socials fadeIn">
       <div id="socials-container" className="socials-container">
         {perspectiveLines.map((line, index) => (
           <>

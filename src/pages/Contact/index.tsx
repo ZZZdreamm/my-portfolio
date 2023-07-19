@@ -11,7 +11,7 @@ export default function Contact() {
           <SendEmail />
         </section>
         <button
-          // id="resume-link"
+          id="resume-link"
           className="button"
           onClick={() => {
             window.open(
