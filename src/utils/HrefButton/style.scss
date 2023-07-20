@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 .hrefButton {
   cursor: pointer;
   border-radius: 50%;
@@ -6,12 +6,16 @@
   height: 5rem;
   width: 5rem;
   transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
   &:hover {
     background-color: $color2;
   }
   img {
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
   }
 }
