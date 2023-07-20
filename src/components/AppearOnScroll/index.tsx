@@ -9,7 +9,6 @@ const AppearOnScroll = () => {
     const appearObserver = new IntersectionObserver(
       (entries, appearObserver) => {
         entries.forEach((entry) => {
-          console.log(entry);
           if (!entry.isIntersecting) {
             return;
           } else {
@@ -21,7 +20,6 @@ const AppearOnScroll = () => {
       appearOptions
     );
     const elements = document.querySelectorAll(".fadeIn");
-    console.log(elements);
     elements.forEach((element) => {
       appearObserver.observe(element);
     });
