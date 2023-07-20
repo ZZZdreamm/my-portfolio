@@ -1,0 +1,33 @@
+.blurImage {
+    width: 100%;
+    height: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mainImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 45;
+  }
+  .previousImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 50;
+  }
+
+  .blurredEffect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 100;
+    transition: all 0.1s;
+  }
+}
