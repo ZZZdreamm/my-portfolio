@@ -13,6 +13,7 @@ import {
   Image4,
 } from "./barImages";
 import BlurImage from "../BlurImage/blurImage";
+import UseWindowSize from "../../Hooks/WindowSizeChanged";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -20,6 +21,9 @@ export default function HamburgerBar() {
   const [open, setOpen] = useState(false);
   const [currentShownImage, setCurrentShownImage] = useState(DefaultImage);
   const [previousImage, setPreviousImage] = useState(DefaultImage);
+  const windowSize = UseWindowSize(resizeBarContent);
+
+
 
   function toggleOpen(open: boolean) {
     const hamburgerToggle = document.querySelector(
@@ -39,6 +43,7 @@ export default function HamburgerBar() {
       setOpen(open);
       setTimeout(() => {
         barItems.forEach((item, index) => {
+          item.style.display = "flex";
           setTimeout(() => {
             item.style.opacity = "1";
           }, index * itemAppearingTime + 2000);
@@ -52,6 +57,9 @@ export default function HamburgerBar() {
       });
       setTimeout(() => {
         toggleBar(open);
+        barItems.forEach((item) => {
+          item.style.display = "none";
+        });
       }, barItems.length * itemAppearingTime + 200);
     }
   }
@@ -66,7 +74,7 @@ export default function HamburgerBar() {
     if (open) {
       barHeader.style.width = "8rem";
       setTimeout(() => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 780) {
           barContent.style.width = "calc(100vw - 8rem)";
         } else {
           barContent.style.width = "calc(50vw - 4rem)";
@@ -95,17 +103,16 @@ export default function HamburgerBar() {
 
   useEffect(() => {
     function scrollToElement(elementId: string) {
-      toggleOpen(false);
-      setTimeout(() => {
-        console.log("contacting");
-        const contactsElement = document.querySelector(`#${elementId}`);
-        if (contactsElement) {
+      const contactsElement = document.querySelector(`#${elementId}`);
+      if (contactsElement) {
+        toggleOpen(false);
+        setTimeout(() => {
           const y =
             contactsElement.getBoundingClientRect().top + window.pageYOffset;
 
           gsap.to(window, { duration: 2, scrollTo: y, ease: "power2" });
-        }
-      }, 5000);
+        }, 5000);
+      }
     }
 
     const links = document.querySelectorAll(".bar-content__body__item");
@@ -163,6 +170,38 @@ export default function HamburgerBar() {
     });
   }, []);
 
+  function openLink(link: string) {
+    window.open(link, "_blank");
+  }
+
+  const socials = [
+    {
+      image: "github.png",
+      link: "https://github.com/ZZZdreamm?tab=repositories",
+    },
+    {
+      image: "facebook.png",
+      link: "https://www.facebook.com/kacper.multan.31/",
+    },
+    {
+      image: "linkedin.png",
+      link: "https://www.linkedin.com/in/kacper-multan-320301243/",
+    },
+  ];
+
+  function resizeBarContent(windowSize: number){
+    const barContent = document.querySelector(".bar-content") as HTMLElement;
+    if(!open){
+      barContent.style.width = "0";
+      return;
+    }
+    if(windowSize < 780){
+      barContent.style.width = "calc(100vw - 8rem)";
+    }else{
+      barContent.style.width = "calc(50vw - 4rem)";
+    }
+  }
+  // const barContentSize = open ? (window.innerWidth < 768 ? "calc(100vw - 8rem)" : "calc(50vw - 4rem)") : "0";
   return (
     <>
       <button id="hamburger-icon" onClick={() => toggleOpen(!open)}>
@@ -229,6 +268,16 @@ export default function HamburgerBar() {
                 </span>
               </span>
             </div>
+            {socials.map((social) => (
+              <div className="bar-content__body__item">
+                <img
+                  className="bar-content__body__item__social"
+                  src={`${ReadyImagesURL}/${social.image}`}
+                  alt=""
+                  onClick={() => openLink(social.link)}
+                />
+              </div>
+            ))}
           </div>
         </section>
         <section className="bar-images">
@@ -237,11 +286,6 @@ export default function HamburgerBar() {
               currentImage={currentShownImage}
               previousImage={previousImage}
             />
-            {/* <img
-              className="bar-images__item__image"
-              src={currentShownImage}
-              alt=""
-            /> */}
           </div>
         </section>
       </div>

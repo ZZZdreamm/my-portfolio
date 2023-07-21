@@ -62,12 +62,11 @@ $main-color: #23abd4;
       display: flex;
       flex-direction: column;
       &__item {
-
+        display: none;
         width: fit-content;
         transition: all 0.5s ease-in-out;
         opacity: 0;
         text-decoration: none;
-        display: block;
         padding: 5px 0;
         font-family: "Open Sans";
         font-size: 26px;
@@ -84,6 +83,14 @@ $main-color: #23abd4;
           $main-color 50%,
           #000 50%
         );
+        // img{
+        //   height: 4rem;
+        //   width: 4rem;
+        // }
+        &__social{
+          height: 3rem;
+          width: 3rem;
+        }
         background-size: 200% 100%;
         background-position: -100%;
         transition: all 0.3s ease-in-out;
