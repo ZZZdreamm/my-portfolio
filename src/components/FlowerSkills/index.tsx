@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import "./style.scss";
+import Debounce from "../../utils/Debounce";
+import UseWindowSize from "../../Hooks/WindowSizeChanged";
 
 interface FlowerSkillsProps {
   skillsType: string;
@@ -10,9 +12,12 @@ export default function FlowerSkills({
   skillsType,
   setSkillsType,
 }: FlowerSkillsProps) {
+  const windowSize = UseWindowSize(resizePetals);
   function changeSkillsType(element: any, type: string, color: string) {
     const allElements = document.querySelectorAll(".skills-image");
     allElements.forEach((element) => {
+      //@ts-ignore
+      element.style.pointerEvents = "none";
       element.classList.remove("green");
       element.classList.remove("red");
       element.classList.remove("blue3");
@@ -43,24 +48,23 @@ export default function FlowerSkills({
     }
     element.classList.add(color);
     if (skillsType != type) {
-      hideAndStretchPetals(element);
+      // Debounce(hideAndStretchPetals(element), 500)
+      hideAndStretchPetals();
       setSkillsType(type);
+    } else {
+      allElements.forEach((element) => {
+        //@ts-ignore
+        element.style.pointerEvents = "all";
+      });
     }
   }
 
-  function hideAndStretchPetals(element: any) {
-    const petals = document.querySelectorAll(
-      ".skills-image"
+  function hideAndStretchPetals() {
+    const petalElements = document.querySelectorAll(
+      ".petal"
     ) as NodeListOf<HTMLElement>;
-    petals.forEach((petal) => {
-      petal.style.pointerEvents = "none";
-      const styling = getComputedStyle(petal);
-      const petalStyles = {
-        left: styling.left,
-        bottom: styling.bottom,
-        width: styling.width,
-        height: styling.height,
-      };
+    petalElements.forEach((petal, index) => {
+      const petalStyles = petals[index].style;
       petal.style.left = "37.5%";
       petal.style.bottom = "37.5%";
       petal.style.width = "25%";
@@ -75,9 +79,113 @@ export default function FlowerSkills({
     });
   }
 
+  const petals = [
+    {
+      style:{
+        left: "-10%",
+        bottom: "0%",
+        width: "50%",
+        height: "50%",
+      },
+      skillsType: "Frontend skills",
+      colorOnClick: "blue3",
+    },
+    {
+      style:{
+        left: "60%",
+        bottom: "0%",
+        width: "50%",
+        height: "50%",
+      },
+      skillsType: "Frontend skills",
+      colorOnClick: "blue3",
+    },
+    {
+      style:{
+        left: "25%",
+        bottom: "65%",
+        width: "50%",
+        height: "50%",
+      },
+      skillsType: "Frontend skills",
+      colorOnClick: "blue3",
+    },
+    {
+      style:{
+        left: "25%",
+        bottom: "-15%",
+        width: "50%",
+        height: "50%",
+      },
+      skillsType: "Backend skills",
+      colorOnClick: "green",
+    },
+    {
+      style:{
+        left: "-12.5%",
+        bottom: "40%",
+        width: "50%",
+        height: "50%",
+      },
+      skillsType: "Backend skills",
+      colorOnClick: "green",
+    },
+    {
+      style:{
+        left: "62.5%",
+        bottom: "40%",
+        width: "50%",
+        height: "50%",
+      },
+      skillsType: "Backend skills",
+      colorOnClick: "green",
+    },
+    {
+      style:{
+        left: "25%",
+        bottom: "25%",
+        width: "50%",
+        height: "50%",
+      },
+      skillsType: "Known bonus tools",
+      colorOnClick: "red",
+    },
+    // {
+    //   style:{
+    //     left: "37.5%",
+    //     bottom: "37.5%",
+    //     width: "25%",
+    //     height: "25%",
+    //   },
+    //   skillsType: "About skills",
+    //   colorOnClick: "yellow",
+    // },
+  ];
+
+  function resizePetals() {
+    const petalsElements = document.querySelectorAll(
+      ".petal"
+    ) as NodeListOf<HTMLElement>;
+    petalsElements.forEach((petal, index) => {
+      const petalPosition = petals[index].style;
+      petal.style.left = petalPosition?.left;
+      petal.style.bottom = petalPosition?.bottom;
+      petal.style.width = petalPosition?.width;
+      petal.style.height = petalPosition?.height;
+    });
+  }
   return (
     <div className="svg-container rotate">
-      <div
+      {petals.map((petal, index) => (
+        <div
+          id={`skills-image-${index + 1}`}
+          className={`skills-image skills-image-${index + 1} petal`}
+          onClick={(e) =>
+            changeSkillsType(e.target, petal.skillsType, petal.colorOnClick)
+          }
+        ></div>
+      ))}
+      {/* <div
         id="skills-image-1"
         className="skills-image skills-image-1"
         onClick={(e) => changeSkillsType(e.target, "Frontend skills", "blue3")}
@@ -111,7 +219,7 @@ export default function FlowerSkills({
       <div
         className="skills-image skills-image-4"
         onClick={(e) => changeSkillsType(e.target, "Known bonus tools", "red")}
-      ></div>
+      ></div> */}
       <div
         className="skills-image skills-image-8 yellow"
         onClick={(e) => changeSkillsType(e.target, "About skills", "yellow")}

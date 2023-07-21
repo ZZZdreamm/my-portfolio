@@ -9,9 +9,8 @@
   // height: 25rem;
   width: 60%;
   aspect-ratio: 1;
-
 }
-.rotate{
+.rotate {
   animation: rotate 16s linear infinite;
 }
 @keyframes rotate {
@@ -22,8 +21,6 @@
     transform: rotate(359deg);
   }
 }
-
-
 
 .skills-image {
   // clip-path: polygon(50% 0, 0 100%, 100% 100%);
@@ -50,10 +47,8 @@
     left: 25%;
   }
   &-4 {
-    transform: rotate(180deg);
-    bottom: 25%;
+    bottom: -15%;
     left: 25%;
-    z-index: 7;
   }
   &-5 {
     left: -12.5%;
@@ -64,8 +59,10 @@
     bottom: 40%;
   }
   &-7 {
-    bottom: -15%;
+    bottom: 25%;
     left: 25%;
+    z-index: 7;
+    transform: rotate(180deg);
   }
   &-8 {
     transform: rotate(180deg);
