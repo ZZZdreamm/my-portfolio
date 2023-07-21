@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import "./style.scss";
 
 interface FlowerSkillsProps {
-  setSkillsType: any;
+  skillsType: string;
+  setSkillsType: (type: string) => void;
 }
 
-export default function FlowerSkills({ setSkillsType }: FlowerSkillsProps) {
+export default function FlowerSkills({
+  skillsType,
+  setSkillsType,
+}: FlowerSkillsProps) {
   function changeSkillsType(element: any, type: string, color: string) {
     const allElements = document.querySelectorAll(".skills-image");
     allElements.forEach((element) => {
@@ -37,8 +42,39 @@ export default function FlowerSkills({ setSkillsType }: FlowerSkillsProps) {
       });
     }
     element.classList.add(color);
-    setSkillsType(type);
+    if (skillsType != type) {
+      hideAndStretchPetals(element);
+      setSkillsType(type);
+    }
   }
+
+  function hideAndStretchPetals(element: any) {
+    const petals = document.querySelectorAll(
+      ".skills-image"
+    ) as NodeListOf<HTMLElement>;
+    petals.forEach((petal) => {
+      petal.style.pointerEvents = "none";
+      const styling = getComputedStyle(petal);
+      const petalStyles = {
+        left: styling.left,
+        bottom: styling.bottom,
+        width: styling.width,
+        height: styling.height,
+      };
+      petal.style.left = "37.5%";
+      petal.style.bottom = "37.5%";
+      petal.style.width = "25%";
+      petal.style.height = "25%";
+      setTimeout(() => {
+        petal.style.left = petalStyles.left;
+        petal.style.bottom = petalStyles.bottom;
+        petal.style.width = petalStyles.width;
+        petal.style.height = petalStyles.height;
+        petal.style.pointerEvents = "all";
+      }, 300);
+    });
+  }
+
   return (
     <div className="svg-container rotate">
       <div

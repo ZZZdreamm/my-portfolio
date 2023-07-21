@@ -23,6 +23,8 @@
   }
 }
 
+
+
 .skills-image {
   // clip-path: polygon(50% 0, 0 100%, 100% 100%);
   border-radius: 50%;
@@ -31,8 +33,9 @@
   position: absolute;
   z-index: 5;
   background-color: grey;
-  transition: background-color 0.5s;
+  transition: all 0.3s;
   border: 1px solid black;
+
   cursor: pointer;
   &-1 {
     left: -10%;

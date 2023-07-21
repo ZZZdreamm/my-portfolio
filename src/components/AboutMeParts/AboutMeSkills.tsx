@@ -43,7 +43,7 @@ export default function AboutMeSkills() {
       style={{ position: "relative" }}
     >
       <div className="fullSize flex-center" style={{ position: "relative" }}>
-        <FlowerSkills setSkillsType={setSkillsType} />
+        <FlowerSkills skillsType={skillsType} setSkillsType={setSkillsType} />
       </div>
       <div className="displayedSkills fullSize">
         <h1 className="about-header">{skillsType}</h1>
