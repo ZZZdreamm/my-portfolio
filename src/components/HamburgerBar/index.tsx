@@ -233,15 +233,15 @@ export default function HamburgerBar() {
         </section>
         <section className="bar-images">
           <div className="bar-images__item">
-            {/* <BlurImage
+            <BlurImage
               currentImage={currentShownImage}
               previousImage={previousImage}
-            /> */}
-            <img
+            />
+            {/* <img
               className="bar-images__item__image"
               src={currentShownImage}
               alt=""
-            />
+            /> */}
           </div>
         </section>
       </div>
