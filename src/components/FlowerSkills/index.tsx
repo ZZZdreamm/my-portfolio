@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import "./style.scss";
-import Debounce from "../../utils/Debounce";
 import UseWindowSize from "../../Hooks/WindowSizeChanged";
+import "./style.scss";
 
 interface FlowerSkillsProps {
   skillsType: string;
@@ -15,6 +13,7 @@ export default function FlowerSkills({
   const windowSize = UseWindowSize(resizePetals);
   function changeSkillsType(element: any, type: string, color: string) {
     const allElements = document.querySelectorAll(".skills-image");
+    const lastPetal = document.querySelector(".skills-image-8") as HTMLElement;
     allElements.forEach((element) => {
       //@ts-ignore
       element.style.pointerEvents = "none";
@@ -48,7 +47,6 @@ export default function FlowerSkills({
     }
     element.classList.add(color);
     if (skillsType != type) {
-      // Debounce(hideAndStretchPetals(element), 500)
       hideAndStretchPetals();
       setSkillsType(type);
     } else {
@@ -56,6 +54,7 @@ export default function FlowerSkills({
         //@ts-ignore
         element.style.pointerEvents = "all";
       });
+      lastPetal.style.pointerEvents = "all"
     }
   }
 
@@ -63,6 +62,8 @@ export default function FlowerSkills({
     const petalElements = document.querySelectorAll(
       ".petal"
     ) as NodeListOf<HTMLElement>;
+    const lastPetal = document.querySelector(".skills-image-8") as HTMLElement;
+
     petalElements.forEach((petal, index) => {
       const petalStyles = petals[index].style;
       petal.style.left = "37.5%";
@@ -77,6 +78,9 @@ export default function FlowerSkills({
         petal.style.pointerEvents = "all";
       }, 300);
     });
+    setTimeout(() => {
+      lastPetal.style.pointerEvents = "all"
+    }, 300);
   }
 
   const petals = [
@@ -150,16 +154,6 @@ export default function FlowerSkills({
       skillsType: "Known bonus tools",
       colorOnClick: "red",
     },
-    // {
-    //   style:{
-    //     left: "37.5%",
-    //     bottom: "37.5%",
-    //     width: "25%",
-    //     height: "25%",
-    //   },
-    //   skillsType: "About skills",
-    //   colorOnClick: "yellow",
-    // },
   ];
 
   function resizePetals() {

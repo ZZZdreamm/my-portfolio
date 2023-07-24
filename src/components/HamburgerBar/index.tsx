@@ -1,19 +1,18 @@
-import { useEffect, useState } from "react";
-import "./style.scss";
-import { ReadyImagesURL } from "../../publicPaths";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState } from "react";
+import UseWindowSize from "../../Hooks/WindowSizeChanged";
+import { ReadyImagesURL } from "../../publicPaths";
+import BlurImage from "../BlurImage/blurImage";
 import {
-  BlurEffectImage,
   DefaultImage,
   Image1,
   Image2,
   Image3,
-  Image4,
+  Image4
 } from "./barImages";
-import BlurImage from "../BlurImage/blurImage";
-import UseWindowSize from "../../Hooks/WindowSizeChanged";
+import "./style.scss";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -136,6 +135,7 @@ export default function HamburgerBar() {
       updateScroller();
     }
   }, [open]);
+
 
   useEffect(() => {
     const barItems = document.querySelectorAll(
