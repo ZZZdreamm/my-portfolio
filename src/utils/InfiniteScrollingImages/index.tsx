@@ -1,6 +1,7 @@
 import "./style.scss";
 import { ReadyImagesURL } from "../../publicPaths";
 import { useEffect, useRef, useState } from "react";
+import LiquidImage from "../SmokeLiquidEffect/LiquidImage";
 interface InfiniteScrollingImagesProps {
   images: string[];
 }
@@ -11,6 +12,7 @@ export default function InfiniteScrollingImages({
   const imageRef = useRef<HTMLImageElement>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
+
     const interval = setInterval(() => {
       imageRef.current?.classList.remove("fade-in");
 
@@ -20,7 +22,6 @@ export default function InfiniteScrollingImages({
       if (!imageRef.current) return;
       fade(imageRef.current)
 
-      // imageRef.current?.classList.add("fade-in");
     }, 2000);
     return () => clearInterval(interval);
   }, [imageRef, images]);
@@ -44,6 +45,9 @@ export default function InfiniteScrollingImages({
       }
     }, 50);
   };
+
+
+  
   return (
     <div className="infiniteScrollingImages">
       <div id="following-image" className="following-image">

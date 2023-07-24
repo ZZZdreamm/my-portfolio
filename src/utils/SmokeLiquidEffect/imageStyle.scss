@@ -1,0 +1,129 @@
+@mixin button($bcolor, $url, $x1, $y1, $bor, $col) {
+  background: $bcolor;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: $x1 $y1;
+  mask-size: $x1 $y1;
+  border: $bor;
+  color: $col;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+.imageContainer-1 {
+  z-index: 20;
+  //   width: 30rem;
+  //   height: 20rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    // @include button(
+    //   #000,
+    //   "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+    //   2300%,
+    //   100%,
+    //   none,
+    //   #fff
+    // );
+    // -webkit-animation: ani2 0.7s steps(22) forwards;
+    // animation: ani2 0.7s steps(22) forwards;
+
+    //   &:hover {
+    //     -webkit-animation: ani 0.7s steps(22) forwards;
+    //     animation: ani 0.7s steps(22) forwards;
+    //   }
+  }
+  .contentPrevious {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @include button(
+      #000,
+      "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+    // "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png",
+    // "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
+      2300%,
+      100%,
+      none,
+      #fff
+    );
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+    &:hover {
+      -webkit-animation: ani 0.7s steps(22) forwards;
+      animation: ani 0.7s steps(22) forwards;
+    }
+  }
+}
+.imageContainer-1 {
+  .contentPrevious.change {
+    -webkit-animation: ani 0.7s steps(22) forwards;
+    animation: ani 0.7s steps(22) forwards;
+  }
+}

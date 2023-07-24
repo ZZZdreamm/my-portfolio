@@ -37,7 +37,7 @@ export default function HrefButton({ link }: HrefButtonProps) {
       <img ref={firstArrowRef} src={`${ReadyImagesURL}/svg-arrow.svg`} alt="" />
       <img
         ref={secondArrowRef}
-        style={{ transform: "translate(-100%, 300%) rotate(45deg)" }}
+        style={{ transform: "translate(-300%, 300%) rotate(45deg)" }}
         src={`${ReadyImagesURL}/svg-arrow.svg`}
         alt=""
       />
