@@ -1,5 +1,5 @@
 import "./style.scss";
-import { ReadyImagesURL } from "../../publicPaths";
+import { ReadyImagesURL } from "../../services/publicPaths";
 import { useEffect, useRef, useState } from "react";
 import LiquidImage from "../../components/_common/SmokeLiquidEffect/LiquidImage";
 interface InfiniteScrollingImagesProps {

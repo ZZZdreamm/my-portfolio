@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ReadyImagesURL } from "../../../../publicPaths";
+import { ReadyImagesURL } from "../../../../services/publicPaths";
 import "./style.scss";
 
 export default function PerspectiveLine({

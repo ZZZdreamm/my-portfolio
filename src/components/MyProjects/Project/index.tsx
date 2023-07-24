@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import useIsInViewport from "../../../Hooks/IsInViewPort";
-import { ReadyImagesURL } from "../../../publicPaths";
+import { ReadyImagesURL } from "../../../services/publicPaths";
 import HrefButton from "../../../utils/HrefButton";
 import "./style.scss";
 import UseWindowSize from "../../../Hooks/WindowSizeChanged";

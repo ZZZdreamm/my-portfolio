@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MySkill from "./FlowerSkills/MySkill";
-import { ReadyImagesURL } from "../../../publicPaths";
+import { ReadyImagesURL } from "../../../services/publicPaths";
 import "./style.scss";
 import FlowerSkills from "./FlowerSkills";
 
