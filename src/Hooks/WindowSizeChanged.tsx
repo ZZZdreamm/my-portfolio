@@ -14,4 +14,6 @@ export default function UseWindowSize(callback:any) {
     if(!windowSize) return
     callback(windowSize)
   },[windowSize])
+
+  return windowSize;
 }

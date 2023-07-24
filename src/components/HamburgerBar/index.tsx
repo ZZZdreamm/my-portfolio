@@ -5,13 +5,7 @@ import { useEffect, useState } from "react";
 import UseWindowSize from "../../Hooks/WindowSizeChanged";
 import { ReadyImagesURL } from "../../publicPaths";
 import BlurImage from "../BlurImage/blurImage";
-import {
-  DefaultImage,
-  Image1,
-  Image2,
-  Image3,
-  Image4
-} from "./barImages";
+import { DefaultImage, Image1, Image2, Image3, Image4 } from "./barImages";
 import "./style.scss";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -22,14 +16,11 @@ export default function HamburgerBar() {
   const [previousImage, setPreviousImage] = useState(DefaultImage);
   const windowSize = UseWindowSize(resizeBarContent);
 
-
-
   function toggleOpen(open: boolean) {
     const hamburgerToggle = document.querySelector(
       "#hamburger-icon"
     ) as HTMLButtonElement;
     if (hamburgerToggle.disabled) return;
-    console.log("toggling", open);
 
     hamburgerToggle.disabled = true;
     const barItems = document.querySelectorAll(
@@ -70,6 +61,8 @@ export default function HamburgerBar() {
     const barHeader = document.querySelector(".bar-header") as HTMLElement;
     const barContent = document.querySelector(".bar-content") as HTMLElement;
     const barImages = document.querySelector(".bar-images") as HTMLElement;
+
+
     if (open) {
       barHeader.style.width = "8rem";
       setTimeout(() => {
@@ -136,7 +129,6 @@ export default function HamburgerBar() {
     }
   }, [open]);
 
-
   useEffect(() => {
     const barItems = document.querySelectorAll(
       ".bar-content__body__item"
@@ -189,19 +181,26 @@ export default function HamburgerBar() {
     },
   ];
 
-  function resizeBarContent(windowSize: number){
+  function resizeBarContent(windowSize: number) {
     const barContent = document.querySelector(".bar-content") as HTMLElement;
-    if(!open){
+    if (!open) {
       barContent.style.width = "0";
+      document.body.style.height = "auto";
+      document.body.style.overflowY = "auto";
+      updateScroller();
       return;
     }
-    if(windowSize < 780){
+    setTimeout(() => {
+      document.body.style.height = "100vh";
+      document.body.style.overflowY = "hidden";
+    }, 100);
+
+    if (windowSize < 780) {
       barContent.style.width = "calc(100vw - 8rem)";
-    }else{
+    } else {
       barContent.style.width = "calc(50vw - 4rem)";
     }
   }
-  // const barContentSize = open ? (window.innerWidth < 768 ? "calc(100vw - 8rem)" : "calc(50vw - 4rem)") : "0";
   return (
     <>
       <button id="hamburger-icon" onClick={() => toggleOpen(!open)}>
