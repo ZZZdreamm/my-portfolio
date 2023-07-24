@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { ReadyImagesURL } from "../../publicPaths";
 import "./imageStyle.scss";
 export default function LiquidImage({ image, previousImage }: any) {
   const imageRef = useRef<HTMLDivElement>(null);

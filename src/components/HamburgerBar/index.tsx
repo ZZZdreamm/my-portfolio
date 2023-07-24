@@ -7,7 +7,7 @@ import { ReadyImagesURL } from "../../publicPaths";
 import BlurImage from "./BlurImage/blurImage";
 import { DefaultImage, Image1, Image2, Image3, Image4 } from "./barImages";
 import "./style.scss";
-import LiquidImage from "../../utils/SmokeLiquidEffect/LiquidImage";
+import LiquidImage from "../_common/SmokeLiquidEffect/LiquidImage";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 

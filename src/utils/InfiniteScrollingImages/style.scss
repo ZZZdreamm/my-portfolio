@@ -3,18 +3,19 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
 .following-image {
-  height: 20rem;
-  width: 30rem;
+  height: 25rem;
+  width: 35rem;
   background-color: var(--white);
   opacity: 1;
   z-index: -1;
   border: 1px solid var(--black);
   box-shadow: 0 0 10px 10px var(--white);
   transition: opacity 2s;
-
+  border-radius: 1rem;
   img {
     width: 100%;
     height: 100%;
