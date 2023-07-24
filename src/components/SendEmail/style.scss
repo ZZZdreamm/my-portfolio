@@ -1,4 +1,3 @@
-@import '../../variables.scss';
 .submit-button {
   background-color: rgb(242, 242, 246);
   color: rgb(4, 4, 4);
@@ -25,7 +24,7 @@
   background: transparent;
   border: none;
   border-bottom: 1px solid #ffffff;
-  color: $text-black;
+  color: var(--text-black);
   font-size: 1.4em;
   outline: none;
 }
@@ -160,11 +159,11 @@ $text-light: #fefefe;
   min-width: $button-width;
   height: $button-width/2.2;
   margin: 20px auto;
-  background-color: $color5;
-  color: $white2;
+  background-color: var(--color5);
+  color: var(--white2);
   border: 1px solid #aaa;
   &:hover {
-    color: $text-black;
+    color: var(--text-black);
   }
 
   font-size: 1.2em;

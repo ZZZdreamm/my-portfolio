@@ -1,4 +1,3 @@
-@import '../../variables.scss';
 #resume-link {
   margin-bottom: 5rem;
 }
@@ -11,12 +10,7 @@
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
-  // background-color: $color1;
-  // color: $text-black;
-  // & input{
-  //   color: $text-black;
-  // }
-  background-color: $color1;
+  background-color: var(--color1);
   z-index: 3;
     position: relative;
 }

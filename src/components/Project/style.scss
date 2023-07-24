@@ -1,4 +1,3 @@
-@import "../../variables.scss";
 
 .projects-icons {
   cursor: pointer;
@@ -38,7 +37,7 @@
 .project {
   display: grid;
   box-sizing: border-box;
-  color: $text-black;
+  color: var(--text-black);
   scroll-snap-align: start;
   &-image{
     height: 100%;
@@ -91,28 +90,6 @@
   }
 }
 
-
-
-
-// .project-left {
-//   align-items: flex-start;
-//   align-self: flex-start;
-// }
-// .project-right {
-//   align-items: flex-end;
-//   align-self: flex-end;
-// }
-
-// @media screen and (max-width: 600px) {
-//   .project {
-//     margin: 5vh 0;
-//   }
-// }
-// @media screen and (min-width: 600px) {
-//   .project {
-//     margin: 10vh 0;
-//   }
-// }
 
 
 .blur{

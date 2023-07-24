@@ -1,4 +1,3 @@
-@import '../../_variables.scss';
 
 .bubblesContainer{
   position: fixed;
@@ -34,7 +33,7 @@
     display: grid;
     // grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
-    color: $white;
+    color: var(--white);
     &__text{
       display: flex;
       flex-direction: column;
@@ -50,7 +49,7 @@
         box-sizing: border-box;
         span{
           font-family: 'Garamond', sans-serif;
-        border-top: 0.2rem solid $white;
+        border-top: 0.2rem solid var(--white);
 
         }
       }
@@ -59,7 +58,7 @@
 }
 .front-page-color{
   position: absolute;
-  background-color: $light-blue;
+  background-color: var(--light-blue);
   width: 40%;
   height: 40%;
   &-left{
@@ -73,7 +72,7 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: $border-color;
+      background-color: var(--border-color);
     }
   }
   &-right{
@@ -117,7 +116,7 @@
 .page-text {
   cursor: pointer;
   font-weight: bold;
-  color: $text-black;
+  color: var(--text-black);
   width: fit-content;
 }
 .page-text-changed {

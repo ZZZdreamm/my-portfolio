@@ -1,9 +1,8 @@
-@import "../../variables.scss";
 $main-color: #23abd4;
 .hamburger-bar {
   height: 4rem;
   width: 4rem;
-  background-color: $color4;
+  background-color: var(--color4);
   position: fixed;
   top: 2rem;
   left: 2rem;
@@ -26,19 +25,19 @@ $main-color: #23abd4;
   width: 0;
   left: 0;
   height: 100vh;
-  background-color: $color2;
+  background-color: var(--color2);
   transition: all 1s ease-in-out;
   z-index: 50;
   top: 0;
   display: grid;
   grid-template-rows: 1fr;
   &-header {
-    border-right: 1px solid $color4;
+    border-right: 1px solid var(--color4);
     position: relative;
     left: 0;
     width: 0;
     height: 100vh;
-    background-color: $color2;
+    background-color: var(--color2);
     z-index: 50;
     transition: all 1s ease-in-out;
   }
@@ -53,7 +52,7 @@ $main-color: #23abd4;
     box-sizing: border-box;
     // padding: 2rem;
     height: 100vh;
-    background-color: $color2;
+    background-color: var(--color2);
     z-index: 49;
     transition: all 1s ease-in-out;
     // display: none;
