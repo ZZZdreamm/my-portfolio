@@ -5,4 +5,6 @@ TOOLS USED IN PROJECT:
 - Three.js
 - React
 - SCSS
+- HTML5
+- 
 Link to my portfolio website: https://zzzdreamm.github.io/my-portfolio/
