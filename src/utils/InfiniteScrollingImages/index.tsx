@@ -19,7 +19,7 @@ export default function InfiniteScrollingImages({
         return currentIndex === images.length - 1 ? 0 : currentIndex + 1;
       });
       if (!imageRef.current) return;
-    }, 2000);
+    }, 1200);
     return () => clearInterval(interval);
   }, [imageRef, images]);
 
