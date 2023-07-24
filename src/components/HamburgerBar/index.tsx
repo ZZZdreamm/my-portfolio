@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useState } from "react";
 import UseWindowSize from "../../Hooks/WindowSizeChanged";
 import { ReadyImagesURL } from "../../publicPaths";
-import BlurImage from "../BlurImage/blurImage";
+import BlurImage from "./BlurImage/blurImage";
 import { DefaultImage, Image1, Image2, Image3, Image4 } from "./barImages";
 import "./style.scss";
 gsap.registerPlugin(ScrollTrigger);

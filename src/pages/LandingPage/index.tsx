@@ -1,20 +1,18 @@
-import AppearOnScroll from "../../components/AppearOnScroll";
-import Carousel from "../../components/Carousel";
+import AboutMe from "../../components/AboutMe";
+import Contact from "../../components/Contact";
 import HamburgerBar from "../../components/HamburgerBar";
+import Home from "../../components/Home";
 import MultiSliders from "../../components/MultiSliders";
-import Slider from "../../components/Slider";
+import MyProjects from "../../components/MyProjects";
 import SmoothPage from "../../components/SmoothPage";
-import AboutMe from "../AboutMe";
-import Contact from "../Contact";
-import FrontPage from "../Home";
-import MyProjects from "../MyProjects";
+import AppearOnScroll from "../../components/_common/AppearOnScroll";
 import "./style.scss";
 
 export default function LandingPage() {
   return (
     <SmoothPage>
       <HamburgerBar />
-      <FrontPage />
+      <Home />
       <MultiSliders />
       <MyProjects />
       <AboutMe />

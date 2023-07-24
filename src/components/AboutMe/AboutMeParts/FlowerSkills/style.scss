@@ -1,0 +1,90 @@
+@import "../../../../styles/mixins.scss";
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10%;
+  // height: 25rem;
+  width: 60%;
+  aspect-ratio: 1;
+}
+.rotate {
+  animation: rotate 16s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.skills-image {
+  // clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  z-index: 5;
+  background-color: grey;
+  transition: all 0.3s;
+  border: 1px solid black;
+
+  cursor: pointer;
+  &-1 {
+    left: -10%;
+    bottom: 0;
+  }
+  &-2 {
+    left: 60%;
+    bottom: 0;
+  }
+  &-3 {
+    bottom: 65%;
+    left: 25%;
+  }
+  &-4 {
+    bottom: -15%;
+    left: 25%;
+  }
+  &-5 {
+    left: -12.5%;
+    bottom: 40%;
+  }
+  &-6 {
+    left: 62.5%;
+    bottom: 40%;
+  }
+  &-7 {
+    bottom: 25%;
+    left: 25%;
+    z-index: 7;
+    transform: rotate(180deg);
+  }
+  &-8 {
+    transform: rotate(180deg);
+    bottom: 37.5%;
+    left: 37.5%;
+    z-index: 10;
+    width: 25%;
+    height: 25%;
+  }
+}
+
+
+@include tablet{
+  .svg-container {
+    position: relative;
+  }
+}
+
+
+@include phone{
+  .svg-container {
+    position: absolute;
+    bottom: 27%;
+    position: relative;
+  }
+}
