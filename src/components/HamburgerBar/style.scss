@@ -13,6 +13,7 @@ $main-color: #23abd4;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
@@ -88,7 +89,7 @@ $main-color: #23abd4;
         //   height: 4rem;
         //   width: 4rem;
         // }
-        &__social{
+        &__social {
           height: 3rem;
           width: 3rem;
         }
@@ -153,16 +154,38 @@ $main-color: #23abd4;
   }
 }
 
-  @include to-tablet{
+@include to-tablet {
   .bar-images {
     display: none;
-
   }
-
 }
- @include tablet {
+@include tablet {
   .bar-content__body__item {
   }
-
 }
 
+/* Styling the hamburger lines */
+.hamburger-bar .btn-line {
+  width: 80%;
+  height: 0.2rem;
+  margin: 0 0 5px 0;
+  background: black;
+  transition: all 0.5s ease-out;
+  border-radius: 2rem;
+}
+
+.hamburger-bar.close {
+  transform: rotate(180deg);
+}
+
+.hamburger-bar.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(35%, 0.8rem);
+}
+
+.hamburger-bar.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-bar.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(25%, -0.5rem);
+}

@@ -14,12 +14,13 @@ export default function HamburgerBar() {
   const [open, setOpen] = useState(false);
   const [currentShownImage, setCurrentShownImage] = useState(DefaultImage);
   const [previousImage, setPreviousImage] = useState(DefaultImage);
-  const windowSize = UseWindowSize(resizeBarContent);
+  const _ = UseWindowSize(resizeBarContent);
 
   function toggleOpen(open: boolean) {
     const hamburgerToggle = document.querySelector(
       "#hamburger-icon"
     ) as HTMLButtonElement;
+
     if (hamburgerToggle.disabled) return;
 
     hamburgerToggle.disabled = true;
@@ -29,6 +30,8 @@ export default function HamburgerBar() {
     const itemAppearingTime = 200;
 
     if (open) {
+      hamburgerToggle.classList.add("close");
+
       toggleBar(open);
       setOpen(open);
       setTimeout(() => {
@@ -40,6 +43,8 @@ export default function HamburgerBar() {
         });
       }, 1000);
     } else {
+      hamburgerToggle.classList.remove("close");
+
       barItems.forEach((item, index) => {
         setTimeout(() => {
           item.style.opacity = "0";
@@ -61,7 +66,6 @@ export default function HamburgerBar() {
     const barHeader = document.querySelector(".bar-header") as HTMLElement;
     const barContent = document.querySelector(".bar-content") as HTMLElement;
     const barImages = document.querySelector(".bar-images") as HTMLElement;
-
 
     if (open) {
       barHeader.style.width = "8rem";
@@ -203,12 +207,19 @@ export default function HamburgerBar() {
   }
   return (
     <>
-      <button id="hamburger-icon" onClick={() => toggleOpen(!open)}>
-        <img
+      <button
+        id="hamburger-icon"
+        className="hamburger-bar"
+        onClick={() => toggleOpen(!open)}
+      >
+        {/* <img
           className="hamburger-bar"
           src={`${ReadyImagesURL}/hamburger-icon.png`}
           alt=""
-        />{" "}
+        />{" "} */}
+        <div className="btn-line"></div>
+        <div className="btn-line"></div>
+        <div className="btn-line"></div>
       </button>
       <div id="hamburger-bar" className="bar">
         <section className="bar-header"></section>
