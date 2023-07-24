@@ -1,3 +1,4 @@
+@import "../../styles/mixins.scss";
 .submit-button {
   background-color: rgb(242, 242, 246);
   color: rgb(4, 4, 4);
@@ -38,7 +39,7 @@
   margin-top: 1em;
 }
 
-@media screen and (max-width: 1100px) {
+@include to-desktop {
   .send-email {
     margin: 0;
   }
@@ -47,7 +48,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@include to-tablet {
   .send-email {
     margin: 0;
     width: 70%;
@@ -143,7 +144,7 @@ $text-light: #fefefe;
 
 @import url(https://fonts.googleapis.com/css?family=Space+Mono);
 
-@media (min-width: 780px) {
+@include tablet {
   .wrapper {
     width: 600px;
     display: grid;

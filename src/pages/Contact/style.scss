@@ -1,7 +1,7 @@
+@import "../../styles/mixins";
 #resume-link {
   margin-bottom: 5rem;
 }
-
 
 #contact {
   display: flex;
@@ -12,28 +12,23 @@
   box-sizing: border-box;
   background-color: var(--color1);
   z-index: 3;
-    position: relative;
+  position: relative;
 }
 
-@media only screen and (max-width: 1000px) {
+@include to-sDesktop {
   #contact {
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  #contact {
     justify-content: space-between;
   }
 }
 
-@media screen and (max-width: 800px) {
+@include to-tablet {
   .contact-section {
     flex-direction: column;
   }
 }
 
-@media screen and (min-width: 400px) and (max-width: 600px) {
+@include rwd-range(400, 600) {
   #contact {
     margin-top: 100px;
   }

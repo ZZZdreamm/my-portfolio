@@ -1,4 +1,4 @@
-
+@import "../../styles/mixins.scss";
 .special-span {
   font-size: 1rem;
   color: #fff;
@@ -30,11 +30,7 @@
   content: "";
   position: absolute;
   inset: -4rem;
-  background: radial-gradient(
-      7rem at left 14rem top 5rem,
-      #ff53bb 100%,
-      #0000
-    ),
+  background: radial-gradient(7rem at left 14rem top 5rem, #ff53bb 100%, #0000),
     radial-gradient(7rem at right 14rem bottom 5rem, #00f8d3 100%, #0000);
   filter: blur(4rem);
   opacity: 0.5;
@@ -53,55 +49,48 @@
   border: 2px solid #333;
 }
 
-.rotating-endless{
-    transform: rotate(36000deg);
-    transition: 0.5s, 600s linear transform;
+.rotating-endless {
+  transform: rotate(36000deg);
+  transition: 0.5s, 600s linear transform;
 }
 
-
-
-
-@media screen and (max-width:600px) {
-    .special-span{
-        width: 50px;
-        height: 50px;
-    }
-}
-
-@media screen and (min-width:600px) {
-    .special-span{
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .special-span{
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media screen and (min-width:1800px) {
-    .special-span{
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media screen and (min-width:2200px) {
-  .special-span{
-      width: 300px;
-      height: 300px;
+@include phone {
+  .special-span {
+    width: 50px;
+    height: 50px;
   }
 }
 
-
-
-
-@media screen and (max-width:1200px) {
-    .special-span{
-        display: none;
-    }
+@include tablet {
+  .special-span {
+    width: 100px;
+    height: 100px;
+  }
 }
 
+@include desktop {
+  .special-span {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@include lDesktop {
+  .special-span {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@include xDesktop {
+  .special-span {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@include to-desktop {
+  .special-span {
+    display: none;
+  }
+}

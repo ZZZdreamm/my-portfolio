@@ -1,8 +1,17 @@
 @import "./breakPoints";
-
+@mixin sPhone{
+  @media screen and (max-width: $screen-xsm-min) {
+    @content;
+  }
+}
 
 @mixin phone {
   @media screen and (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+@mixin to-tablet {
+  @media screen and (max-width: $screen-md-min) {
     @content;
   }
 }
@@ -11,11 +20,23 @@
     @content;
   }
 }
+
+@mixin to-sDesktop {
+  @media (max-width: $screen-lg-min) {
+    @content;
+  }
+}
 @mixin sDesktop {
   @media (min-width: $screen-lg-min) {
     @content;
   }
 }
+@mixin to-desktop {
+  @media (max-width: $screen-xl-min) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $screen-xl-min) {
     @content;
@@ -23,6 +44,12 @@
 }
 @mixin lDesktop {
   @media (min-width: $screen-xxl-min) {
+    @content;
+  }
+}
+
+@mixin to-xDesktop {
+  @media (max-width: $screen-xxxl-min) {
     @content;
   }
 }
@@ -35,6 +62,12 @@
 
 @mixin rwd($screen) {
   @media (min-width: ($screen+"px")) {
+    @content;
+  }
+}
+
+@mixin rwd-range($screen1, $screen2) {
+  @media (min-width: ($screen1+"px")) and (max-width: ($screen2+"px")) {
     @content;
   }
 }

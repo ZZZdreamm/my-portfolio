@@ -1,3 +1,4 @@
+@import "../../styles/mixins.scss";
 .about-me {
   padding: 2vh 2vw;
   display: flex;
@@ -36,7 +37,7 @@
   gap: 3em;
 }
 
-@media screen and (max-width: 800px) {
+  @include to-tablet{
   .about-story {
     flex-direction: column;
   }

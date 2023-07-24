@@ -1,25 +1,12 @@
+@import "../../styles/mixins.scss";
 
-.about-story {
-  width: 97vw;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font: inherit;
-  gap: 3em;
-}
-
-@media screen and (max-width: 800px) {
-  .about-story {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 600px) {
+@include phone {
   .about-story-text {
     width: 80%;
   }
 }
-@media screen and (min-width: 600px) {
+
+@include tablet {
   .about-story-text {
     width: 70%;
   }
@@ -32,7 +19,7 @@
   font-size: 1.2em;
   flex-direction: column;
   align-items: flex-start;
-  p{
+  p {
     margin: 1rem 0;
   }
 }
@@ -40,14 +27,12 @@
 #about-header {
   font-size: 2.5em;
   margin-bottom: 5vh;
-
 }
 
-.about-header{
+.about-header {
   font-size: 2.5em;
   margin-bottom: 5rem;
 }
-
 
 .about-story-skills {
   width: calc(100% - 0.6em);
@@ -113,7 +98,7 @@
     bottom: -15%;
     left: 25%;
   }
-  &-8{
+  &-8 {
     transform: rotate(180deg);
     bottom: 37.5%;
     left: 37.5%;
@@ -122,20 +107,20 @@
     height: 25%;
   }
 }
-.above{
-  z-index:10
+.above {
+  z-index: 10;
 }
 
-@media screen and (max-width: 600px) {
+@include phone {
   .mySkills-container {
     flex-direction: column;
     align-items: center;
   }
-  #about-header{
+  #about-header {
     width: 70%;
   }
 }
-@media screen and (min-width: 600px) {
+@include tablet {
   .mySkills-container {
     height: 40rem;
     position: relative;
@@ -145,7 +130,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@include phone {
   .mySkills-container {
     height: 65rem;
   }
@@ -156,33 +141,36 @@
   }
   .displayedSkills {
     position: absolute;
-    top:48%;
+    top: 48%;
     margin-top: 5%;
   }
 }
 
-.mySkills-container{
+.mySkills-container {
   padding: 5%;
   background-color: var(--color3);
   border-radius: 2rem;
   border: 1px solid var(--border-color);
 }
 
-.aboutSkills-text{
+.aboutSkills-text {
   text-align: center;
   margin-bottom: 5%;
 }
 
-@media screen and (max-width: 1200px) {
-  .aboutSkills-text{
-  font-size: 0.8em;
-
+@include phone {
+  .aboutSkills-text {
+    font-size: 0.8em;
   }
 }
-@media screen and (min-width: 1200px) {
-  .aboutSkills-text{
-  font-size: 1em;
-
+@include tablet {
+  .aboutSkills-text {
+    font-size: 0.8em;
   }
 }
 
+@include desktop {
+  .aboutSkills-text {
+    font-size: 1em;
+  }
+}

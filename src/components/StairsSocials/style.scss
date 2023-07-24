@@ -1,4 +1,4 @@
-
+@import "../../styles/mixins.scss";
 .contact-socials {
   margin-bottom: 10%;
   width: 48vw;
@@ -9,69 +9,62 @@
   font-size: 4rem;
   font-weight: bold;
   position: relative;
-
 }
-@media screen and (min-width: 400px) and (max-width: 600px) {
+@include rwd-range(400, 600) {
   .contact-socials {
     right: 50px;
     margin-top: -20%;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
   .socials-container {
     left: 7vw;
-
   }
 }
-@media screen and (min-width:1000px) {
-  .socials-container{
+@include sDesktop {
+  .socials-container {
     bottom: 150px;
-
   }
 }
 
-@media only screen and (max-width: 400px) {
+@include sPhone {
   .contact-socials {
     right: 50px;
   }
 }
 
-@media only screen and (mix-width: 400px) {
+@include rwd(400px) {
   .socials-container {
     margin-top: 30%;
     right: 0px;
   }
 }
-@media only screen and (min-width: 600px) {
+@include rwd(600px) {
   .contact-socials {
     margin-top: 0%;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@include sDesktop {
   .contact-socials {
     margin-top: 30%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@include desktop {
   .contact-socials {
     margin-top: 10%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .contact-socials {
     right: 50px;
   }
 }
 
-@media screen and (min-width: 3000px) {
+@include xDesktop {
   .socials-container {
     left: 10vw;
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@include to-sDesktop {
   .socials-container {
     height: 30rem;
     top: 15%;

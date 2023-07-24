@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 $main-color: #23abd4;
 .hamburger-bar {
   height: 4rem;
@@ -151,14 +153,14 @@ $main-color: #23abd4;
   }
 }
 
-@media screen and (max-width: 780px) {
+  @include to-tablet{
   .bar-images {
     display: none;
 
   }
 
 }
-@media screen and (min-width: 780px) {
+ @include tablet {
   .bar-content__body__item {
   }
 

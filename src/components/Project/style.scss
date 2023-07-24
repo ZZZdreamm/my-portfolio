@@ -1,31 +1,31 @@
-
+@import "../../styles/mixins.scss";
 .projects-icons {
   cursor: pointer;
   transition: all 0.5s;
   display: flex;
 }
 
-@media screen and (max-width: 600px) {
+@include phone {
   .projects-icons {
     max-width: 100%;
     max-height: 100%;
   }
 }
-@media screen and (min-width: 600px) {
+@include tablet {
   .projects-icons {
     width: 30vw;
   }
 }
 
-@media screen and (max-width:600px){
-  .project{
+@include phone {
+  .project {
     grid-template-columns: 50% 50%;
     grid-template-rows: 80% 20%;
     padding: 15vh 5vw 10vh 5vw;
   }
 }
-@media screen and (min-width:600px){
-  .project{
+@include tablet {
+  .project {
     grid-template-columns: 50% 50%;
     grid-template-rows: 60% 40%;
     padding: 15vh 10vw 10vh 10vw;
@@ -39,7 +39,7 @@
   box-sizing: border-box;
   color: var(--text-black);
   scroll-snap-align: start;
-  &-image{
+  &-image {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
@@ -53,51 +53,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
   &-name {
     padding: 10%;
     box-sizing: border-box;
     text-align: center;
   }
-  &-goTo{
+  &-goTo {
     padding: 10%;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;
-
   }
 }
 
-
-
-@media screen and (max-width:600px) {
-  .project-info{
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width:600px) and (max-width:1200px){
-  .project-info{
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width:1200px) and (max-width:2600px){
-  .project-info{
+@include to-xDesktop{
+  .project-info {
     font-size: 1.5rem;
   }
 }
 
 
-
-.blur{
+.blur {
   filter: blur(20px);
   transform: scale(1.4);
   transition: all 0s;
 }
 
-.right{
+.right {
   justify-self: flex-end;
 }
