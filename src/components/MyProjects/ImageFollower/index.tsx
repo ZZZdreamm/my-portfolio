@@ -1,9 +1,7 @@
-import { ReadyImagesURL } from "../../../publicPaths";
-import MouseFollower from "../../../utils/MouseFollower";
 import InfiniteScrollingImages from "../../../utils/InfiniteScrollingImages";
-import "./style.scss";
+import MouseFollower from "../../../utils/MouseFollower";
 import { BodyPortal } from "../../../utils/Portal";
-import { useState } from "react";
+import "./style.scss";
 interface ImageFollowerProps {
   projectImages: string[];
 }
