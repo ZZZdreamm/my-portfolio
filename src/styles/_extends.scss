@@ -38,38 +38,38 @@
   padding: 0;
   font-family: "Corben", cursive;
 }
-@media only screen and (min-width: 3200px) {
-  html {
-    font-size: 32px;
-  }
-}
-@media only screen and (min-width: 2400px) and (max-width: 3200px) {
-  html {
-    font-size: 32px;
-  }
-}
-
-@media only screen and (min-width: 1100px) and (max-width: 2400px) {
-  html {
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width: 700px) and (max-width: 1100px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (min-width: 400px) and (max-width: 700px) {
-  html {
-    font-size: 10px;
-  }
-}
-@media only screen and (max-width: 400px) {
+@include phone {
   html {
     font-size: 8px;
   }
 }
+@include tablet {
+  html {
+    font-size: 10px;
+  }
+}
+@include sDesktop {
+  html {
+    font-size: 12px;
+  }
+}
+@include desktop {
+  html {
+    font-size: 16px;
+  }
+}
+@include lDesktop {
+  html {
+    font-size: 32px;
+  }
+}
+
+@include xDesktop{
+  html {
+    font-size: 32px;
+  }
+}
+
 
 html,
 body {

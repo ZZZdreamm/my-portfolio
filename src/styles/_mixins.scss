@@ -1,7 +1,8 @@
-@import './breakPoints';
+@import "./breakPoints";
+
 
 @mixin phone {
-  @media screen and (min-width: $screen-sm-min) {
+  @media screen and (max-width: $screen-sm-max) {
     @content;
   }
 }
@@ -25,8 +26,15 @@
     @content;
   }
 }
+
+@mixin xDesktop {
+  @media (min-width: $screen-xxxl-min) {
+    @content;
+  }
+}
+
 @mixin rwd($screen) {
-  @media (min-width: ($screen+'px')) {
+  @media (min-width: ($screen+"px")) {
     @content;
   }
 }
