@@ -1,5 +1,7 @@
 @import "../../styles/mixins.scss";
 .about-me {
+  width: 100vw;
+  box-sizing: border-box;
   padding: 2vh 2vw;
   display: flex;
   flex-direction: column;
