@@ -1,3 +1,5 @@
+Cool looking website introducing myself with many animations.
+
 This is my portfolio where i have stored links to my important websites.
 
 TOOLS USED IN PROJECT:
@@ -6,5 +8,4 @@ TOOLS USED IN PROJECT:
 - React
 - SCSS
 - HTML5
-- 
 Link to my portfolio website: https://zzzdreamm.github.io/my-portfolio/
