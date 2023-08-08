@@ -1,16 +1,19 @@
 import { gsap } from "gsap";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import "./styles.scss";
 
 const SmoothPage = ({ children }) => {
+  const scrollContainerRef = useRef(null);
   useEffect(() => {
     if (window.innerWidth < 1200) return;
+    if (!scrollContainerRef.current) return;
+
     var html = document.documentElement;
     var body = document.body;
 
     var scroller = {
-      target: document.querySelector("#scroll-container"),
+      target: scrollContainerRef.current,
       ease: 0.05,
       endY: 0,
       y: 0,
@@ -20,17 +23,20 @@ const SmoothPage = ({ children }) => {
 
     var requestId = null;
 
+    console.log(scroller.target);
+
     gsap.set(scroller.target, {
       rotation: 0.01,
       force3D: true,
     });
 
-    window.addEventListener("load", onLoad);
+    // window.addEventListener("load", onLoad);
 
     function onLoad() {
       updateScroller();
       window.focus();
       window.addEventListener("resize", onResize);
+      console.log("resize");
       document.addEventListener("scroll", onScroll);
     }
 
@@ -64,6 +70,7 @@ const SmoothPage = ({ children }) => {
 
     function onScroll() {
       scroller.scrollRequest++;
+      console.log(requestId);
       if (!requestId) {
         requestId = requestAnimationFrame(updateScroller);
       }
@@ -75,12 +82,20 @@ const SmoothPage = ({ children }) => {
         requestId = requestAnimationFrame(updateScroller);
       }
     }
-  }, []);
+
+    // updateScroller();
+    window.addEventListener("resize", onResize);
+    document.addEventListener("scroll", onScroll);
+  }, [scrollContainerRef.current]);
   return (
     <>
       {window.innerWidth >= 1200 ? (
         <div className="viewport">
-          <div id="scroll-container" className="scroll-container">
+          <div
+            ref={scrollContainerRef}
+            id="scroll-container"
+            className="scroll-container"
+          >
             {children}
           </div>
         </div>
