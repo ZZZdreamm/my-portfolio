@@ -6,9 +6,9 @@ https://zzzdreamm.github.io/my-portfolio/
 
 <h2>My Projects</h2>
 <ul>
-  <li><a href="https://zzzdreamm.github.io/social-app/">Social media app</a> - social app that mimics facebook</li>
-  <li><a href="https://zzzdreamm.github.io/Cacarrot/">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
-  <li><a href="https://hot-news-cyan.vercel.app/">News app</a> - news searching app</li>
+  <li><a href="https://github.com/ZZZdreamm/social-app">Social media app</a> - social app that mimics facebook</li>
+  <li><a href="https://github.com/ZZZdreamm/Cacarrot">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
+  <li><a href="https://github.com/ZZZdreamm/HotNews">News app</a> - news searching app</li>
 </ul>
 
 <h2>Technologies</h2>
