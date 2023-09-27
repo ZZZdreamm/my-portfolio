@@ -29,12 +29,17 @@ export default function AboutMeSkills() {
   const backendSkills = [
     { name: "C#", icon: `${ReadyImagesURL}/c-sharp-icon.png` },
     { name: "Node.js", icon: `${ReadyImagesURL}/node-js-icon.png` },
+    { name: "NestJS", icon: `${ReadyImagesURL}/nestjs-icon.jpg` },
     { name: "SQL", icon: `${ReadyImagesURL}/sql-icon.svg` },
+    { name: "MongoDB", icon: `${ReadyImagesURL}/mongodb-icon.png` },
+
   ];
 
   const knownTools = [
     { name: "Git", icon: `${ReadyImagesURL}/git-icon.png` },
     { name: "Firebase", icon: `${ReadyImagesURL}/firebase-icon.png` },
+    { name: "Jest", icon: `${ReadyImagesURL}/jest-icon.png` },
+    { name: "Cypress", icon: `${ReadyImagesURL}/cypress-icon.jpg` },
   ];
 
   return (

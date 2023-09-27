@@ -54,7 +54,7 @@ export default function FlowerSkills({
         //@ts-ignore
         element.style.pointerEvents = "all";
       });
-      lastPetal.style.pointerEvents = "all"
+      lastPetal.style.pointerEvents = "all";
     }
   }
 
@@ -79,13 +79,13 @@ export default function FlowerSkills({
       }, 300);
     });
     setTimeout(() => {
-      lastPetal.style.pointerEvents = "all"
+      lastPetal.style.pointerEvents = "all";
     }, 300);
   }
 
   const petals = [
     {
-      style:{
+      style: {
         left: "-10%",
         bottom: "0%",
         width: "50%",
@@ -95,7 +95,7 @@ export default function FlowerSkills({
       colorOnClick: "blue3",
     },
     {
-      style:{
+      style: {
         left: "60%",
         bottom: "0%",
         width: "50%",
@@ -105,7 +105,7 @@ export default function FlowerSkills({
       colorOnClick: "blue3",
     },
     {
-      style:{
+      style: {
         left: "25%",
         bottom: "65%",
         width: "50%",
@@ -115,7 +115,7 @@ export default function FlowerSkills({
       colorOnClick: "blue3",
     },
     {
-      style:{
+      style: {
         left: "25%",
         bottom: "-15%",
         width: "50%",
@@ -125,7 +125,7 @@ export default function FlowerSkills({
       colorOnClick: "green",
     },
     {
-      style:{
+      style: {
         left: "-12.5%",
         bottom: "40%",
         width: "50%",
@@ -135,7 +135,7 @@ export default function FlowerSkills({
       colorOnClick: "green",
     },
     {
-      style:{
+      style: {
         left: "62.5%",
         bottom: "40%",
         width: "50%",
@@ -145,7 +145,7 @@ export default function FlowerSkills({
       colorOnClick: "green",
     },
     {
-      style:{
+      style: {
         left: "25%",
         bottom: "25%",
         width: "50%",
@@ -179,41 +179,6 @@ export default function FlowerSkills({
           }
         ></div>
       ))}
-      {/* <div
-        id="skills-image-1"
-        className="skills-image skills-image-1"
-        onClick={(e) => changeSkillsType(e.target, "Frontend skills", "blue3")}
-      ></div>
-      <div
-        id="skills-image-2"
-        className="skills-image skills-image-2"
-        onClick={(e) => changeSkillsType(e.target, "Frontend skills", "blue3")}
-      ></div>
-      <div
-        id="skills-image-3"
-        className="skills-image skills-image-3"
-        onClick={(e) => changeSkillsType(e.target, "Frontend skills", "blue3")}
-      ></div>
-
-      <div
-        id="skills-image-4"
-        className="skills-image skills-image-5"
-        onClick={(e) => changeSkillsType(e.target, "Backend skills", "green")}
-      ></div>
-      <div
-        id="skills-image-5"
-        className="skills-image skills-image-6"
-        onClick={(e) => changeSkillsType(e.target, "Backend skills", "green")}
-      ></div>
-      <div
-        id="skills-image-6"
-        className="skills-image skills-image-7"
-        onClick={(e) => changeSkillsType(e.target, "Backend skills", "green")}
-      ></div>
-      <div
-        className="skills-image skills-image-4"
-        onClick={(e) => changeSkillsType(e.target, "Known bonus tools", "red")}
-      ></div> */}
       <div
         className="skills-image skills-image-8 yellow"
         onClick={(e) => changeSkillsType(e.target, "About skills", "yellow")}

@@ -12,7 +12,7 @@ export default function AboutMeDescription() {
       className="fadeIn from-bottom"
     >
       <div
-        style={{display: "flex", justifyContent: "flex-end" }}
+        style={{ display: "flex", justifyContent: "flex-end" }}
         className="very-large-font"
         id="about-header"
       >
