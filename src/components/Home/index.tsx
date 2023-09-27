@@ -31,36 +31,36 @@ export default function Home() {
 
         <div className="front-page-content">
           <div className="front-page-content__text fadeIn from-right">
-            <h1
+            <h2
               className="front-page-content__text__inner"
               style={{ textAlign: "end" }}
             >
               <span>FOLIO OF KACPER</span>
-            </h1>
+            </h2>
           </div>
           <div className="front-page-content__text fadeIn from-left">
-            <h1
+            <h2
               className="front-page-content__text__inner"
               style={{ textAlign: "start" }}
             >
               <span>CLEAR CODE</span>
-            </h1>
+            </h2>
           </div>
           <div className="front-page-content__text fadeIn from-right">
-            <h1
+            <h2
               className="front-page-content__text__inner"
               style={{ textAlign: "end" }}
             >
               <span>NICE DESIGN</span>
-            </h1>
+            </h2>
           </div>
           <div className="front-page-content__text fadeIn from-left">
-            <h1
+            <h2
               className="front-page-content__text__inner"
               style={{ textAlign: "start" }}
             >
               <span>Frontend Developer</span>
-            </h1>
+            </h2>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ $main-color: #23abd4;
 .hamburger-bar {
   height: 4rem;
   width: 4rem;
-  background-color: var(--color4);
+  background-color: var(--color3);
   position: absolute;
   top: 2rem;
   left: 2rem;
@@ -35,7 +35,6 @@ $main-color: #23abd4;
   display: grid;
   grid-template-rows: 1fr;
   &-header {
-    border-right: 1px solid var(--color4);
     position: relative;
     left: 0;
     width: 0;

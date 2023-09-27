@@ -84,8 +84,9 @@ const SmoothPage = ({ children }) => {
     }
 
     // updateScroller();
-    window.addEventListener("resize", onResize);
-    document.addEventListener("scroll", onScroll);
+    // window.addEventListener("resize", onResize);
+    // document.addEventListener("scroll", onScroll);
+    onLoad();
   }, [scrollContainerRef.current]);
   return (
     <>

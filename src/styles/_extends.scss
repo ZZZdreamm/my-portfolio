@@ -42,6 +42,11 @@
     font-size: 8px;
   }
 }
+@include to-tablet {
+  html {
+    font-size: 9px;
+  }
+}
 @include tablet {
   html {
     font-size: 10px;
