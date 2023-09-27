@@ -19,17 +19,35 @@
 
 @include phone {
   .project {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 80% 20%;
-    padding: 15vh 5vw 10vh 5vw;
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 5vw 5vh 5vw;
+  }
+  .project-name {
+    padding: 0;
+  }
+  .project-goTo {
+    padding: 0;
+  }
+  .project-info {
+    padding: 5%;
   }
 }
 @include tablet {
   .project {
     grid-template-columns: 50% 50%;
     grid-template-rows: 60% 40%;
-    padding: 15vh 10vw 10vh 10vw;
+    padding: 10vh 10vw 5vh 10vw;
     width: 100vw;
+    &-name {
+      padding: 10%;
+    }
+    &-goTo {
+      padding: 10%;
+    }
+    &-info {
+      padding: 10%;
+    }
   }
 }
 
@@ -47,19 +65,16 @@
     align-items: center;
   }
   &-info {
-    padding: 10%;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &-name {
-    padding: 10%;
     box-sizing: border-box;
     text-align: center;
   }
   &-goTo {
-    padding: 10%;
     box-sizing: border-box;
     display: flex;
     align-items: flex-start;
@@ -67,12 +82,11 @@
   }
 }
 
-@include to-xDesktop{
+@include to-xDesktop {
   .project-info {
     font-size: 1.5rem;
   }
 }
-
 
 .blur {
   filter: blur(20px);

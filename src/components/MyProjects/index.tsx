@@ -46,24 +46,6 @@ const myProjects = [
 ];
 export default function MyProjects() {
   const [hoveredImage, setHoveredImage] = useState<string[]>([]);
-  // useEffect(() => {
-  //   let sections = gsap.utils.toArray(".project");
-
-  //   gsap.to(sections, {
-  //     xPercent: -100 * (sections.length - 1),
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: ".my-projects",
-  //       pin: true,
-  //       scrub: 1,
-  //       // snap: 1,
-  //       start: "top top",
-  //       // base vertical scrolling on how wide the container is so it feels more natural.
-  //       //@ts-ignore
-  //       end: () => "+=" + document.querySelector(".my-projects").offsetWidth,
-  //     },
-  //   });
-  // }, []);
 
   return (
     <>
