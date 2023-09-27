@@ -55,7 +55,7 @@
     align-items: center;
   }
   .email-input {
-    max-width: fit-content;
+    max-width: 100%;
   }
 }
 
@@ -65,6 +65,7 @@
   align-items: flex-start;
   gap: 1em;
   justify-content: flex-start;
+  max-width: 100%;
 }
 
 .loader {

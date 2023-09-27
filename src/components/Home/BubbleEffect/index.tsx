@@ -23,14 +23,15 @@ export default function BubbleEffect({
   }, []);
 
   useEffect(() => {
-    if (!expandMore) return;
+    if (!refContainer.current) return;
     window.addEventListener("scroll", expandOnScrollDown);
-  }, [expandMore]);
+    window.addEventListener("resize", expandOnScrollDown);
+  }, [refContainer.current]);
 
   function expandOnScrollDown() {
     const container = refContainer.current as HTMLDivElement;
     if (!expandMore) return;
-    if(!container) return;
+    if (!container) return;
     if (window.scrollY > 0) {
       container.classList.add("bubbleEffectExpand");
     } else {

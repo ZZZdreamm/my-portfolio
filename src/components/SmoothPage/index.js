@@ -6,7 +6,7 @@ import "./styles.scss";
 const SmoothPage = ({ children }) => {
   const scrollContainerRef = useRef(null);
   useEffect(() => {
-    if (window.innerWidth < 1200) return;
+    // if (window.innerWidth < 1200) return;
     if (!scrollContainerRef.current) return;
 
     var html = document.documentElement;
@@ -23,20 +23,15 @@ const SmoothPage = ({ children }) => {
 
     var requestId = null;
 
-    console.log(scroller.target);
-
     gsap.set(scroller.target, {
       rotation: 0.01,
       force3D: true,
     });
 
-    // window.addEventListener("load", onLoad);
-
     function onLoad() {
       updateScroller();
       window.focus();
       window.addEventListener("resize", onResize);
-      console.log("resize");
       document.addEventListener("scroll", onScroll);
     }
 
@@ -44,6 +39,7 @@ const SmoothPage = ({ children }) => {
       var resized = scroller.resizeRequest > 0;
       if (resized) {
         var height = scroller.target.clientHeight;
+        if (window.innerWidth > 1000) height += 500;
         body.style.height = height + "px";
         scroller.resizeRequest = 0;
       }
@@ -70,7 +66,6 @@ const SmoothPage = ({ children }) => {
 
     function onScroll() {
       scroller.scrollRequest++;
-      console.log(requestId);
       if (!requestId) {
         requestId = requestAnimationFrame(updateScroller);
       }
@@ -83,26 +78,32 @@ const SmoothPage = ({ children }) => {
       }
     }
 
-    // updateScroller();
-    // window.addEventListener("resize", onResize);
-    // document.addEventListener("scroll", onScroll);
+    // onLoad();
+
     onLoad();
+
+    // return () => {
+    //   window.removeEventListener("load", onLoad);
+    //   window.removeEventListener("resize", onResize);
+    //   document.removeEventListener("scroll", onScroll);
+    // };
+    // window.addEventListener("load", updateScroller);
   }, [scrollContainerRef.current]);
   return (
     <>
-      {window.innerWidth >= 1200 ? (
-        <div className="viewport">
-          <div
-            ref={scrollContainerRef}
-            id="scroll-container"
-            className="scroll-container"
-          >
-            {children}
-          </div>
+      {/* {window.innerWidth >= 1200 ? ( */}
+      <div className="viewport">
+        <div
+          ref={scrollContainerRef}
+          id="scroll-container"
+          className="scroll-container"
+        >
+          {children}
         </div>
-      ) : (
+      </div>
+      {/* ) : (
         <>{children}</>
-      )}
+      )} */}
     </>
   );
 };

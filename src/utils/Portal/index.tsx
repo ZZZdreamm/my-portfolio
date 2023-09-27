@@ -8,6 +8,7 @@ export default function Portal({ children }: any) {
   return ReactDOM.createPortal(
     children,
     document.getElementById("scroll-container")!
+    // document.getElementById('root')!
   );
 }
 

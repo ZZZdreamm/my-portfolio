@@ -35,7 +35,7 @@ export default function Home() {
               className="front-page-content__text__inner"
               style={{ textAlign: "end" }}
             >
-              <span>FOLIO OF KACPER</span>
+              <span>Folio of KACPER</span>
             </h2>
           </div>
           <div className="front-page-content__text fadeIn from-left">

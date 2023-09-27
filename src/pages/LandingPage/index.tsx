@@ -18,6 +18,7 @@ export default function LandingPage() {
       <AboutMe />
       <Contact />
       <AppearOnScroll />
+      <span id="endOfPage"></span>
     </SmoothPage>
   );
 }
