@@ -75,9 +75,7 @@ const SmoothPage = ({ children }) => {
       requestId = requestAnimationFrame(updateScroller);
     }
 
-    // onLoad();
     setTimeout(() => {
-      console.log("loading");
       onLoad();
     }, 100);
   }, [scrollContainerRef.current]);
