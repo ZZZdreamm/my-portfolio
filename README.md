@@ -5,6 +5,7 @@ Cool looking website introducing myself with many animations.
 https://zzzdreamm.github.io/my-portfolio/
 
 <h2>My Projects</h2>
+<h4>Social app and nest server are newest projects so their code quality is highest of all my projects</h4>
 <ul>
   <li><a href="https://github.com/ZZZdreamm/social-app">Social media app</a> - social app that mimics facebook</li>
       <li><a href="https://github.com/ZZZdreamm/nestJS-server">NestJS server</a> - backend server used for all my apps</li>
