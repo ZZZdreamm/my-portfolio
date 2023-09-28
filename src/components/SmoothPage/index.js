@@ -32,14 +32,13 @@ const SmoothPage = ({ children }) => {
       updateScroller();
       window.focus();
       window.addEventListener("resize", onResize);
-      document.addEventListener("scroll", onScroll);
+      window.addEventListener("scroll", onScroll);
     }
 
     function updateScroller() {
       var resized = scroller.resizeRequest > 0;
       if (resized) {
         var height = scroller.target.clientHeight;
-        if (window.innerWidth > 1000) height += 500;
         body.style.height = height + "px";
         scroller.resizeRequest = 0;
       }
@@ -73,21 +72,14 @@ const SmoothPage = ({ children }) => {
 
     function onResize() {
       scroller.resizeRequest++;
-      if (!requestId) {
-        requestId = requestAnimationFrame(updateScroller);
-      }
+      requestId = requestAnimationFrame(updateScroller);
     }
 
     // onLoad();
-
-    onLoad();
-
-    // return () => {
-    //   window.removeEventListener("load", onLoad);
-    //   window.removeEventListener("resize", onResize);
-    //   document.removeEventListener("scroll", onScroll);
-    // };
-    // window.addEventListener("load", updateScroller);
+    setTimeout(() => {
+      console.log("loading");
+      onLoad();
+    }, 100);
   }, [scrollContainerRef.current]);
   return (
     <>
