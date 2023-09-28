@@ -58,7 +58,7 @@ const SmoothPage = ({ children }) => {
       });
 
       requestId = requestAnimationFrame(updateScroller);
-      // scroller.scrollRequ est > 0
+      // scroller.scrollRequest > 0
       //   ? requestAnimationFrame(updateScroller)
       //   : null;
     }
