@@ -57,10 +57,10 @@ const SmoothPage = ({ children }) => {
         y: -scroller.y,
       });
 
-      requestId =
-        scroller.scrollRequest > 0
-          ? requestAnimationFrame(updateScroller)
-          : null;
+      requestId = requestAnimationFrame(updateScroller);
+      // scroller.scrollRequ est > 0
+      //   ? requestAnimationFrame(updateScroller)
+      //   : null;
     }
 
     function onScroll() {
@@ -71,8 +71,10 @@ const SmoothPage = ({ children }) => {
     }
 
     function onResize() {
-      scroller.resizeRequest++;
-      requestId = requestAnimationFrame(updateScroller);
+      setTimeout(() => {
+        scroller.resizeRequest++;
+        requestId = requestAnimationFrame(updateScroller);
+      }, 10);
     }
 
     setTimeout(() => {
