@@ -7,6 +7,7 @@ https://zzzdreamm.github.io/my-portfolio/
 <h2>My Projects</h2>
 <ul>
   <li><a href="https://github.com/ZZZdreamm/social-app">Social media app</a> - social app that mimics facebook</li>
+      <li><a href="https://github.com/ZZZdreamm/nestJS-server">NestJS server</a> - backend server used for all my apps</li>
   <li><a href="https://github.com/ZZZdreamm/Cacarrot">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
   <li><a href="https://github.com/ZZZdreamm/HotNews">News app</a> - news searching app</li>
 </ul>
