@@ -71,14 +71,21 @@ const SmoothPage = ({ children }) => {
     }
 
     function onResize() {
-      setTimeout(() => {
-        scroller.resizeRequest++;
+      // setTimeout(() => {
+      //   scroller.resizeRequest++;
+      //   requestId = requestAnimationFrame(updateScroller);
+      // }, 10);
+      scroller.scrollRequest++;
+      if (!requestId) {
         requestId = requestAnimationFrame(updateScroller);
-      }, 10);
+      }
     }
 
     setTimeout(() => {
       onLoad();
+      setTimeout(() => {
+        updateScroller();
+      }, 1000);
     }, 100);
   }, [scrollContainerRef.current]);
   return (
