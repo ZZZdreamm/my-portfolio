@@ -22,6 +22,7 @@ const SmoothPage = ({ children }) => {
     };
 
     var requestId = null;
+    var resizeNow = false;
 
     gsap.set(scroller.target, {
       rotation: 0.01,
@@ -38,9 +39,13 @@ const SmoothPage = ({ children }) => {
     function updateScroller() {
       var resized = scroller.resizeRequest > 0;
       if (resized) {
+        scroller.resizeRequest = 0;
+        resizeNow = true;
+      }
+      if (resizeNow) {
         var height = scroller.target.clientHeight;
         body.style.height = height + "px";
-        scroller.resizeRequest = 0;
+        resizeNow = false;
       }
 
       var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
@@ -51,6 +56,8 @@ const SmoothPage = ({ children }) => {
       if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
         scroller.y = scrollY;
         scroller.scrollRequest = 0;
+        var height = scroller.target.clientHeight;
+        body.style.height = height + "px";
       }
 
       gsap.set(scroller.target, {
@@ -58,7 +65,7 @@ const SmoothPage = ({ children }) => {
       });
 
       requestId = requestAnimationFrame(updateScroller);
-      // scroller.scrollRequest > 0
+      // let p = scroller.scrollRequest > 0
       //   ? requestAnimationFrame(updateScroller)
       //   : null;
     }
@@ -71,10 +78,7 @@ const SmoothPage = ({ children }) => {
     }
 
     function onResize() {
-      // setTimeout(() => {
-      //   scroller.resizeRequest++;
-      //   requestId = requestAnimationFrame(updateScroller);
-      // }, 10);
+      scroller.resizeRequest++;
       scroller.scrollRequest++;
       if (!requestId) {
         requestId = requestAnimationFrame(updateScroller);
@@ -88,6 +92,12 @@ const SmoothPage = ({ children }) => {
       }, 1000);
     }, 100);
   }, [scrollContainerRef.current]);
+
+
+  console.log(
+    "scrollContainerRef: ",
+    scrollContainerRef?.current?.clientHeight
+  );
   return (
     <>
       {/* {window.innerWidth >= 1200 ? ( */}
