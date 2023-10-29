@@ -56,8 +56,10 @@ const SmoothPage = ({ children }) => {
       if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
         scroller.y = scrollY;
         scroller.scrollRequest = 0;
-        var height = scroller.target.clientHeight;
-        body.style.height = height + "px";
+        if (body.style.overflowY !== "hidden") {
+          var height = scroller.target.clientHeight;
+          body.style.height = height + "px";
+        }
       }
 
       gsap.set(scroller.target, {
@@ -92,7 +94,6 @@ const SmoothPage = ({ children }) => {
       }, 1000);
     }, 100);
   }, [scrollContainerRef.current]);
-
 
   console.log(
     "scrollContainerRef: ",
