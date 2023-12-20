@@ -25,13 +25,22 @@ const myProjects = [
     side: "left",
   },
   {
+    icon: "tradeiti-logo.png",
+    name: "TradEiti",
+    link: "https://github.com/ZZZdreamm/Tradeiti",
+    description:
+      "TradEITI is a web application designed to facilitate the exchange of class hours among students. The problem I have encountered during my first year of studies was the lack of an available platform for exchanging class hours between students.",
+    hoverImage: ["tradeiti1.png", "tradeiti2.png", "tradeiti3.png"],
+    side: "right",
+  },
+  {
     icon: "kahoot-icon.webp",
     name: "Kahoot like game",
     link: "https://zzzdreamm.github.io/Cacarrot/",
     description:
       "A game that allows you to create and play quizzes with others",
     hoverImage: ["cacarrot-1.png", "cacarrot-2.png", "cacarrot-3.jpg"],
-    side: "right",
+    side: "left",
   },
 
   {
@@ -41,7 +50,7 @@ const myProjects = [
     description:
       "A news app which allows searching internet for most recent news on topic of your choice.",
     hoverImage: ["hot-news-1.png", "hot-news-2.png", "hot-news-3.png"],
-    side: "left",
+    side: "right",
   },
   {
     icon: "nestjs-icon.jpg",
@@ -55,7 +64,7 @@ const myProjects = [
       "jwttoken.png",
       "swagger-icon.jpg",
     ],
-    side: "right",
+    side: "left",
   },
 ];
 export default function MyProjects() {

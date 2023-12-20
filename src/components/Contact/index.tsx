@@ -15,7 +15,8 @@ export default function Contact() {
           className="button"
           onClick={() => {
             window.open(
-              "https://drive.google.com/file/d/1gcQ-NmrmqNT01nSIOfE8LAW7bV9S5svi/view?usp=sharing"
+              "https://docs.google.com/document/d/1USZu2EszUWhUSSAjQlNCptcVWgiEXX66CWFiL65WXFA/edit?usp=sharing",
+              "_blank"
             );
           }}
         >
