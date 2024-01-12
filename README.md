@@ -5,10 +5,10 @@ Cool looking website introducing myself with many animations.
 https://zzzdreamm.github.io/my-portfolio/
 
 <h2>My Projects</h2>
-<h4>Social app and nest server are newest projects so their code quality is highest of all my projects</h4>
+<h4>Social app, tradeEITI and nest server are newest projects so their code quality is highest of all my projects</h4>
 <ul>
   <li><a href="https://github.com/ZZZdreamm/social-app">Social media app</a> - social app that mimics facebook</li>
-  <li><a href="https://github.com/ZZZdreamm/Tradeiti">Class hours trading app for students</a></li>
+  <li><a href="https://github.com/ZZZdreamm/Tradeiti">TradEITI</a> - Class hours trading app for students</li>
       <li><a href="https://github.com/ZZZdreamm/nestJS-server">NestJS server</a> - backend server used for all my apps</li>
   <li><a href="https://github.com/ZZZdreamm/Cacarrot">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
   <li><a href="https://github.com/ZZZdreamm/HotNews">News app</a> - news searching app</li>
