@@ -4,15 +4,18 @@ Cool looking website introducing myself with many animations.
 <h2>Online Version</h2>
 https://zzzdreamm.github.io/my-portfolio/
 
+<h2>My CV</h2>
+<a href="https://drive.google.com/file/d/1txZP5SfN0RqTKmvW3xjhFQnwvETpq8rI/view?usp=sharing" target="_blank">My portfolio</a>
+
 <h2>My Projects</h2>
 <h4>Social app, tradeEITI and nest server are newest projects so their code quality is highest of all my projects</h4>
 <ul>
-  <li><a href="https://github.com/ZZZdreamm/social-app">Social media app</a> - social app that mimics facebook</li>
-  <li><a href="https://github.com/ZZZdreamm/ReserveIT">Lessons reservation app</a> - Application used for reservation of courses with tutors</li>
-  <li><a href="https://github.com/ZZZdreamm/Tradeiti">TradEITI</a> - Class hours trading app for students</li>
-  <li><a href="https://github.com/ZZZdreamm/nestJS-server">NestJS server</a> - backend server used for all my apps</li>
-  <li><a href="https://github.com/ZZZdreamm/Cacarrot">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
-  <li><a href="https://github.com/ZZZdreamm/HotNews">News app</a> - news searching app</li>
+  <li><a href="https://github.com/ZZZdreamm/social-app" target="_blank">Social media app</a> - social app that mimics facebook</li>
+  <li><a href="https://github.com/ZZZdreamm/ReserveIT" target="_blank">Lessons reservation app</a> - Application used for reservation of courses with tutors</li>
+  <li><a href="https://github.com/ZZZdreamm/Tradeiti" target="_blank">TradEITI</a> - Class hours trading app for students</li>
+  <li><a href="https://github.com/ZZZdreamm/nestJS-server" target="_blank">NestJS server</a> - backend server used for all my apps</li>
+  <li><a href="https://github.com/ZZZdreamm/Cacarrot" target="_blank">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
+  <li><a href="https://github.com/ZZZdreamm/HotNews" target="_blank">News app</a> - news searching app</li>
 </ul>
 
 <h2>My technology stack</h2>
