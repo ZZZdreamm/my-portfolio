@@ -18,6 +18,7 @@ https://zzzdreamm.github.io/my-portfolio/
   <li><a href="https://github.com/ZZZdreamm/HotNews" target="_blank">News app</a> - news searching app</li>
   <li><a href="https://github.com/ZZZdreamm/machine_learning" target="_blank">Machine learning algorithms</a> - implemented for studies</li>
   <li><a href="https://github.com/ZZZdreamm/Pokemon-Game" target="_blank">Pokemon game</a> - implemented for studies</li>
+  <li><a href="https://github.com/ZZZdreamm/NTNU-studies">Projects and assignments done for Norwegian University of Technology</a></li>
 </ul>
 
 <h2>My technology stack</h2>
