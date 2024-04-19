@@ -16,6 +16,7 @@ https://zzzdreamm.github.io/my-portfolio/
   <li><a href="https://github.com/ZZZdreamm/nestJS-server" target="_blank">NestJS server</a> - backend server used for all my apps</li>
   <li><a href="https://github.com/ZZZdreamm/Cacarrot" target="_blank">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
   <li><a href="https://github.com/ZZZdreamm/HotNews" target="_blank">News app</a> - news searching app</li>
+  <li><a href="https://github.com/ZZZdreamm/machine_learning" target="_blank">Machine learning algorithms implemented for studies</a></li>
 </ul>
 
 <h2>My technology stack</h2>
