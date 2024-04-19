@@ -34,6 +34,28 @@ const myProjects = [
     side: "right",
   },
   {
+    icon: "reserve-it.png",
+    name: "ReserveIT",
+    link: "https://github.com/ZZZdreamm/ReserveIT",
+    description: "A reservation system for an online classes for students",
+    hoverImage: ["reserveit-1.png", "reserveit-2.png", "reserveit-3.png"],
+    side: "right",
+  },
+  {
+    icon: "nestjs-icon.jpg",
+    name: "NestJS server",
+    link: "https://github.com/ZZZdreamm/nestJS-server",
+    description:
+      "A backend server in Node.js using NestJS framework used for all apps that were mentioned before.",
+    hoverImage: [
+      "nestjs-icon3.jpg",
+      "firebase-icon.png",
+      "jwttoken.png",
+      "swagger-icon.jpg",
+    ],
+    side: "left",
+  },
+  {
     icon: "kahoot-icon.webp",
     name: "Kahoot like game",
     link: "https://zzzdreamm.github.io/Cacarrot/",
@@ -52,28 +74,6 @@ const myProjects = [
     hoverImage: ["hot-news-1.png", "hot-news-2.png", "hot-news-3.png"],
     side: "right",
   },
-  {
-    icon: "nestjs-icon.jpg",
-    name: "NestJS server",
-    link: "https://github.com/ZZZdreamm/nestJS-server",
-    description:
-      "A backend server in Node.js using NestJS framework used for all apps that were mentioned before.",
-    hoverImage: [
-      "nestjs-icon3.jpg",
-      "firebase-icon.png",
-      "jwttoken.png",
-      "swagger-icon.jpg",
-    ],
-    side: "left",
-  },
-  {
-    icon: "reserve-it.png",
-    name: "ReserveIT",
-    link: "https://github.com/ZZZdreamm/ReserveIT",
-    description: "A reservation system for an online classes for students",
-    hoverImage: ["reserveit-1.png", "reserveit-2.png", "reserveit-3.png"],
-    side: "right",
-  }
 ];
 export default function MyProjects() {
   const [hoveredImage, setHoveredImage] = useState<string[]>([]);
