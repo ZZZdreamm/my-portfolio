@@ -59,7 +59,7 @@ export default function Home() {
               className="front-page-content__text__inner"
               style={{ textAlign: "start" }}
             >
-              <span>Frontend Developer</span>
+              <span>Software Developer</span>
             </h2>
           </div>
         </div>
