@@ -27,12 +27,13 @@ export default function AboutMeSkills() {
     { name: "Redux", icon: `${ReadyImagesURL}/redux-icon.png` },
   ];
   const backendSkills = [
-    { name: "C#", icon: `${ReadyImagesURL}/c-sharp-icon.png` },
+    { name: "Java", icon: `${ReadyImagesURL}/java-icon.png` },
+    { name: "Spring", icon: `${ReadyImagesURL}/springboot-icon.png` },
+    { name: "OAuth2", icon: `${ReadyImagesURL}/oauth2-icon.png` },
+    { name: "SQL", icon: `${ReadyImagesURL}/sql-icon.svg` },
     { name: "Node.js", icon: `${ReadyImagesURL}/node-js-icon.png` },
     { name: "NestJS", icon: `${ReadyImagesURL}/nestjs-icon.jpg` },
-    { name: "SQL", icon: `${ReadyImagesURL}/sql-icon.svg` },
     { name: "MongoDB", icon: `${ReadyImagesURL}/mongodb-icon.png` },
-
   ];
 
   const knownTools = [

@@ -66,6 +66,14 @@ const myProjects = [
     ],
     side: "left",
   },
+  {
+    icon: "reserve-it.png",
+    name: "ReserveIT",
+    link: "https://github.com/ZZZdreamm/ReserveIT",
+    description: "A reservation system for an online classes for students",
+    hoverImage: ["reserveit-1.png", "reserveit-2.png", "reserveit-3.png"],
+    side: "right",
+  }
 ];
 export default function MyProjects() {
   const [hoveredImage, setHoveredImage] = useState<string[]>([]);

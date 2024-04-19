@@ -10,7 +10,7 @@ export default function Contact() {
           <StairsSocials />
           <SendEmail />
         </section>
-        <button
+        {/* <button
           id="resume-link"
           className="button"
           onClick={() => {
@@ -21,7 +21,7 @@ export default function Contact() {
           }}
         >
           My Resume (pdf)
-        </button>
+        </button> */}
       </div>
     </>
   );
