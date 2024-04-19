@@ -11,7 +11,7 @@ https://zzzdreamm.github.io/my-portfolio/
 <h4>Social app, tradeEITI and nest server are newest projects so their code quality is highest of all my projects</h4>
 <ul>
   <li><a href="https://github.com/ZZZdreamm/social-app" target="_blank">Social media app</a> - social app that mimics facebook</li>
-  <li><a href="https://github.com/ZZZdreamm/ReserveIT" target="_blank">Lessons reservation app</a> - Application used for reservation of courses with tutors</li>
+  <li><a href="https://github.com/ZZZdreamm/ReserveIT" target="_blank">Lessons reservation app</a> - Application used for reservation of courses with tutors - app is mostly build from backend site, but frontend is still not ready</li>
   <li><a href="https://github.com/ZZZdreamm/Tradeiti" target="_blank">TradEITI</a> - Class hours trading app for students</li>
   <li><a href="https://github.com/ZZZdreamm/nestJS-server" target="_blank">NestJS server</a> - backend server used for all my apps</li>
   <li><a href="https://github.com/ZZZdreamm/Cacarrot" target="_blank">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
