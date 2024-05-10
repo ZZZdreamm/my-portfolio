@@ -9,6 +9,8 @@ https://zzzdreamm.github.io/my-portfolio/
 
 <h2>My Projects</h2>
 <h4>Social app, tradeEITI and nest server are newest projects so their code quality is highest of all my projects</h4>
+
+<h4>Web applications</h4>
 <ul>
   <li><a href="https://github.com/ZZZdreamm/social-app" target="_blank">Social media app</a> - social app that mimics facebook</li>
   <li><a href="https://github.com/ZZZdreamm/ReserveIT" target="_blank">Lessons reservation app</a> - Application used for reservation of courses with tutors - app is mostly build from backend site, but frontend is still not ready</li>
@@ -16,8 +18,16 @@ https://zzzdreamm.github.io/my-portfolio/
   <li><a href="https://github.com/ZZZdreamm/nestJS-server" target="_blank">NestJS server</a> - backend server used for all my apps</li>
   <li><a href="https://github.com/ZZZdreamm/Cacarrot" target="_blank">Kahoot like game</a> - web game having functionalities of kahoot with some more</li>
   <li><a href="https://github.com/ZZZdreamm/HotNews" target="_blank">News app</a> - news searching app</li>
-  <li><a href="https://github.com/ZZZdreamm/machine_learning" target="_blank">Machine learning algorithms</a> - implemented for studies</li>
+</ul>
+<h4>Games</h4>
+<ul>
+  <li><a href="https://github.com/ZZZdreamm/Avalanche-Rush" target="_blank">Avalanche rush</a> - game implemented for studies on NTNU in Norway</li>
   <li><a href="https://github.com/ZZZdreamm/Pokemon-Game" target="_blank">Pokemon game</a> - implemented for studies</li>
+</ul>
+
+<h4>Data algorithms</h4>
+<ul>
+  <li><a href="https://github.com/ZZZdreamm/machine_learning" target="_blank">Machine learning algorithms</a> - implemented for studies</li>
   <li><a href="https://github.com/ZZZdreamm/NTNU-studies">Projects and assignments done for Norwegian University of Technology</a></li>
 </ul>
 
