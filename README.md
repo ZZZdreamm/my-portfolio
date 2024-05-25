@@ -5,7 +5,7 @@ Cool looking website introducing myself with many animations.
 https://zzzdreamm.github.io/my-portfolio/
 
 <h2>My CV</h2>
-<a href="https://drive.google.com/file/d/1txZP5SfN0RqTKmvW3xjhFQnwvETpq8rI/view?usp=sharing" target="_blank">My portfolio</a>
+<a href="https://drive.google.com/file/d/1jh-S0LzzoFe6g7QMEfnr8BI2tZtFs0q_/view?usp=sharing" target="_blank">My portfolio</a>
 
 <h2>My Projects</h2>
 <h4>Social app, tradeEITI and nest server are newest projects so their code quality is highest of all my projects</h4>
